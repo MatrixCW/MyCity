@@ -17,6 +17,8 @@
 		4BFE934117952C8000C875D4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934017952C8000C875D4 /* Security.framework */; };
 		4BFE934317952C8500C875D4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934217952C8500C875D4 /* StoreKit.framework */; };
 		4BFE934517952C9300C875D4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934417952C9300C875D4 /* SystemConfiguration.framework */; };
+		4BFE934717952DE700C875D4 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934617952DE700C875D4 /* FacebookSDK.framework */; };
+		4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE934817952E0C00C875D4 /* FacebookSDKResources.bundle */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
 		C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */; };
 		C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCE17952687007AAFE2 /* UIKit.framework */; };
@@ -54,6 +56,8 @@
 		4BFE934017952C8000C875D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4BFE934217952C8500C875D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4BFE934417952C9300C875D4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4BFE934617952DE700C875D4 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		4BFE934817952E0C00C875D4 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		C9C74BC717952687007AAFE2 /* MyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C74BCA17952687007AAFE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +97,7 @@
 				C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */,
 				4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */,
 				C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */,
+				4BFE934717952DE700C875D4 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +136,8 @@
 		C9C74BC917952687007AAFE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4BFE934817952E0C00C875D4 /* FacebookSDKResources.bundle */,
+				4BFE934617952DE700C875D4 /* FacebookSDK.framework */,
 				4BFE934417952C9300C875D4 /* SystemConfiguration.framework */,
 				4BFE934217952C8500C875D4 /* StoreKit.framework */,
 				4BFE934017952C8000C875D4 /* Security.framework */,
@@ -270,6 +277,7 @@
 			files = (
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
+				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
 				C9C74BDE17952687007AAFE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
