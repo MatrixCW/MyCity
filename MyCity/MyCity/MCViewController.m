@@ -6,14 +6,9 @@
 //
 //
 
-#import "MCViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
 #import "MCLogInViewController.h"
-@interface MCViewController ()
+#import "MCViewController.h"
 
-@property GMSMapView *mapView;
-
-@end
 
 @implementation MCViewController
 
@@ -22,23 +17,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    /*    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-     longitude:151.20
-     zoom:6];
-     self.mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
-     self.mapView.myLocationEnabled = YES;
-     self.view = self.mapView;
-     
-     // Creates a marker in the center of the map.
-     GMSMarker *marker = [[GMSMarker alloc] init];
-     marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-     marker.title = @"Sydney";
-     marker.snippet = @"Australia";
-     marker.map = self.mapView;*/
     UIImage *background = [UIImage imageNamed:@"city-at-night-shmlcbm.jpg"];
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:background];
     backgroundView.frame = CGRectMake(0, 0, backgroundView.frame.size.width, backgroundView.frame.size.height);
-    //self.view = backgroundView;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{

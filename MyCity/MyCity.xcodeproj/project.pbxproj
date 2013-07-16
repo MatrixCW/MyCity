@@ -20,6 +20,8 @@
 		4BFE934D17952E4800C875D4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934C17952E4700C875D4 /* AdSupport.framework */; };
 		4BFE934F17952E5700C875D4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934E17952E5700C875D4 /* libsqlite3.dylib */; };
 		4BFE935117952E6200C875D4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE935017952E6200C875D4 /* Social.framework */; };
+		C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */; };
+		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE93531795315900C875D4 /* MCLogInViewController.m */; };
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
 		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
@@ -77,6 +79,8 @@
 		4BFE934C17952E4700C875D4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4BFE934E17952E5700C875D4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BFE935017952E6200C875D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
+		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		4BFE93521795315900C875D4 /* MCLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLogInViewController.h; sourceTree = "<group>"; };
 		4BFE93531795315900C875D4 /* MCLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLogInViewController.m; sourceTree = "<group>"; };
 		4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-at-night-shmlcbm.jpg"; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		C9C74C1517952CE5007AAFE2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		C9C74C1717952CED007AAFE2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9C74C1F1795446B007AAFE2 /* MCGeoLocationTriplet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MCGeoLocationTriplet.h; path = ../MCGeoLocationTriplet.h; sourceTree = "<group>"; };
+		C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MCGeoLocationTriplet.m; path = ../MCGeoLocationTriplet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +247,10 @@
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
 				C9C74BDF17952687007AAFE2 /* MCViewController.h */,
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
+				C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */,
+				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
+				C9C74C1F1795446B007AAFE2 /* MCGeoLocationTriplet.h */,
+				C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */,
 				4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */,
 				4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */,
 				4BFE93521795315900C875D4 /* MCLogInViewController.h */,
@@ -380,6 +390,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
+				C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
@@ -507,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -526,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
