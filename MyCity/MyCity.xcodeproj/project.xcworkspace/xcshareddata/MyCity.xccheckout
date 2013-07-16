@@ -3,34 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D994CC8A-29A7-46FC-943F-B696EA6B36F3</string>
+	<string>37B4EDEC-41AA-4271-9827-BAF65E396D9B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyCity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3D0D0FFD-0B58-4EEC-9024-82801C3FDD16</key>
-		<string>ssh://github.com/MatrixCW/MyCity.git</string>
+		<key>93172326-2510-4D96-B69B-C7A00CAAB978</key>
+		<string>https://github.com/MatrixCW/MyCity.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyCity/MyCity.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3D0D0FFD-0B58-4EEC-9024-82801C3FDD16</key>
+		<key>93172326-2510-4D96-B69B-C7A00CAAB978</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/MatrixCW/MyCity.git</string>
+	<string>https://github.com/MatrixCW/MyCity.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3D0D0FFD-0B58-4EEC-9024-82801C3FDD16</string>
+	<string>93172326-2510-4D96-B69B-C7A00CAAB978</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3D0D0FFD-0B58-4EEC-9024-82801C3FDD16</string>
+			<string>93172326-2510-4D96-B69B-C7A00CAAB978</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MyCity</string>
 		</dict>
