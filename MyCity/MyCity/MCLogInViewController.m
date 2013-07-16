@@ -26,6 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UILabel *label = [[UILabel alloc] init];
+    label.text = @"MyCity";
+    [label sizeToFit];
+    self.logInView.logo = label;
 	// Do any additional setup after loading the view.
 }
 

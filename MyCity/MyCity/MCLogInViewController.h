@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-@interface MCLogInViewController : UIViewController
-
+@interface MCLogInViewController : PFLogInViewController
 @end
