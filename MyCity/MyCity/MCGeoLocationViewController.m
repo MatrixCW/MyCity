@@ -18,7 +18,44 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
+                                                            longitude:151.20
+                                                                 zoom:6];
+    self.mapView = [GMSMapView mapWithFrame:self.GoolgeMapView.bounds camera:camera];
+    self.mapView.myLocationEnabled = YES;
+    [self.GoolgeMapView addSubview:self.mapView];
+    self.GeoLocationInfo = [[NSMutableArray alloc] init];
+
 }
+
+
+-(void)addNewCoordinate{
+    
+    CGFloat currentLatitude  = self.mapView.camera.target.latitude;
+    CGFloat currentLongitude = self.mapView.camera.target.longitude;
+    CGFloat currentZoomLevel = self.mapView.camera.zoom;
+    
+    MCGeoLocationTriplet *tempGeoInfo = [MCGeoLocationTriplet initWithLatitude:currentLatitude
+                                                                     Longitude:currentLongitude
+                                                                  andZoomLevel:currentZoomLevel];
+    
+    [self.GeoLocationInfo addObject:tempGeoInfo];
+    [self showNewCoordinate];
+}
+
+
+-(void)showNewCoordinate{
+    
+    for(id object in self.GeoLocationInfo){
+        
+        if([object isKindOfClass:[MCGeoLocationTriplet class]]){
+            MCGeoLocationTriplet *temp = (MCGeoLocationTriplet*)object;
+            [temp showInfo];
+            
+        }
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -28,9 +65,13 @@
 
 
 - (IBAction)addGeoInfo:(id)sender {
+    
+    [self addNewCoordinate];
 }
 
 -(void)setCityName:(NSString*)cityName{
+    
+    self.CityNameTag.text = cityName;
     
 }
 @end
