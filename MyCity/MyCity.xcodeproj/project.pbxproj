@@ -23,6 +23,7 @@
 		4BFE934D17952E4800C875D4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934C17952E4700C875D4 /* AdSupport.framework */; };
 		4BFE934F17952E5700C875D4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934E17952E5700C875D4 /* libsqlite3.dylib */; };
 		4BFE935117952E6200C875D4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE935017952E6200C875D4 /* Social.framework */; };
+		4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE93531795315900C875D4 /* MCLogInViewController.m */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
 		C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */; };
 		C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCE17952687007AAFE2 /* UIKit.framework */; };
@@ -66,6 +67,8 @@
 		4BFE934C17952E4700C875D4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4BFE934E17952E5700C875D4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BFE935017952E6200C875D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		4BFE93521795315900C875D4 /* MCLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLogInViewController.h; sourceTree = "<group>"; };
+		4BFE93531795315900C875D4 /* MCLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLogInViewController.m; sourceTree = "<group>"; };
 		C9C74BC717952687007AAFE2 /* MyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C74BCA17952687007AAFE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
 				C9C74BDF17952687007AAFE2 /* MCViewController.h */,
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
+				4BFE93521795315900C875D4 /* MCLogInViewController.h */,
+				4BFE93531795315900C875D4 /* MCLogInViewController.m */,
 				C9C74BE217952687007AAFE2 /* Images.xcassets */,
 				C9C74BD117952687007AAFE2 /* Supporting Files */,
 			);
@@ -315,6 +320,7 @@
 			files = (
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
+				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
 				C9C74BD717952687007AAFE2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
