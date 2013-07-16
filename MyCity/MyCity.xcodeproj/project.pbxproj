@@ -21,6 +21,20 @@
 		C9C74BEC17952687007AAFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCE17952687007AAFE2 /* UIKit.framework */; };
 		C9C74BF417952687007AAFE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9C74BF217952687007AAFE2 /* InfoPlist.strings */; };
 		C9C74BF617952687007AAFE2 /* MyCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C74BF517952687007AAFE2 /* MyCityTests.m */; };
+		C9C74C0017952BF3007AAFE2 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BFF17952BF3007AAFE2 /* GoogleMaps.framework */; };
+		C9C74C0217952C3B007AAFE2 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9C74C0117952C3B007AAFE2 /* GoogleMaps.bundle */; };
+		C9C74C0417952C88007AAFE2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0317952C88007AAFE2 /* AVFoundation.framework */; };
+		C9C74C0617952C94007AAFE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0517952C94007AAFE2 /* CoreData.framework */; };
+		C9C74C0817952C9D007AAFE2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0717952C9D007AAFE2 /* CoreLocation.framework */; };
+		C9C74C0A17952CA8007AAFE2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0917952CA8007AAFE2 /* CoreText.framework */; };
+		C9C74C0C17952CAD007AAFE2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0B17952CAD007AAFE2 /* GLKit.framework */; };
+		C9C74C0E17952CBB007AAFE2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0D17952CBB007AAFE2 /* ImageIO.framework */; };
+		C9C74C1017952CC5007AAFE2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0F17952CC5007AAFE2 /* libc++.dylib */; };
+		C9C74C1217952CD2007AAFE2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1117952CD2007AAFE2 /* libicucore.dylib */; };
+		C9C74C1417952CDE007AAFE2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1317952CDE007AAFE2 /* libz.dylib */; };
+		C9C74C1617952CE5007AAFE2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1517952CE5007AAFE2 /* OpenGLES.framework */; };
+		C9C74C1817952CED007AAFE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1717952CED007AAFE2 /* QuartzCore.framework */; };
+		C9C74C1A17952CF5007AAFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +67,20 @@
 		C9C74BF117952687007AAFE2 /* MyCityTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyCityTests-Info.plist"; sourceTree = "<group>"; };
 		C9C74BF317952687007AAFE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9C74BF517952687007AAFE2 /* MyCityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCityTests.m; sourceTree = "<group>"; };
+		C9C74BFF17952BF3007AAFE2 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		C9C74C0117952C3B007AAFE2 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		C9C74C0317952C88007AAFE2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C9C74C0517952C94007AAFE2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C9C74C0717952C9D007AAFE2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9C74C0917952CA8007AAFE2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		C9C74C0B17952CAD007AAFE2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C9C74C0D17952CBB007AAFE2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C9C74C0F17952CC5007AAFE2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C9C74C1117952CD2007AAFE2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C9C74C1317952CDE007AAFE2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C9C74C1517952CE5007AAFE2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		C9C74C1717952CED007AAFE2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +88,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C74C1A17952CF5007AAFE2 /* SystemConfiguration.framework in Frameworks */,
+				C9C74C1817952CED007AAFE2 /* QuartzCore.framework in Frameworks */,
+				C9C74C1617952CE5007AAFE2 /* OpenGLES.framework in Frameworks */,
+				C9C74C1417952CDE007AAFE2 /* libz.dylib in Frameworks */,
+				C9C74C1217952CD2007AAFE2 /* libicucore.dylib in Frameworks */,
+				C9C74C1017952CC5007AAFE2 /* libc++.dylib in Frameworks */,
+				C9C74C0E17952CBB007AAFE2 /* ImageIO.framework in Frameworks */,
+				C9C74C0C17952CAD007AAFE2 /* GLKit.framework in Frameworks */,
+				C9C74C0A17952CA8007AAFE2 /* CoreText.framework in Frameworks */,
+				C9C74C0817952C9D007AAFE2 /* CoreLocation.framework in Frameworks */,
+				C9C74C0617952C94007AAFE2 /* CoreData.framework in Frameworks */,
+				C9C74C0417952C88007AAFE2 /* AVFoundation.framework in Frameworks */,
 				C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */,
 				C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */,
+				C9C74C0017952BF3007AAFE2 /* GoogleMaps.framework in Frameworks */,
 				C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +142,20 @@
 		C9C74BC917952687007AAFE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */,
+				C9C74C1717952CED007AAFE2 /* QuartzCore.framework */,
+				C9C74C1517952CE5007AAFE2 /* OpenGLES.framework */,
+				C9C74C1317952CDE007AAFE2 /* libz.dylib */,
+				C9C74C1117952CD2007AAFE2 /* libicucore.dylib */,
+				C9C74C0F17952CC5007AAFE2 /* libc++.dylib */,
+				C9C74C0D17952CBB007AAFE2 /* ImageIO.framework */,
+				C9C74C0B17952CAD007AAFE2 /* GLKit.framework */,
+				C9C74C0917952CA8007AAFE2 /* CoreText.framework */,
+				C9C74C0717952C9D007AAFE2 /* CoreLocation.framework */,
+				C9C74C0517952C94007AAFE2 /* CoreData.framework */,
+				C9C74C0317952C88007AAFE2 /* AVFoundation.framework */,
+				C9C74C0117952C3B007AAFE2 /* GoogleMaps.bundle */,
+				C9C74BFF17952BF3007AAFE2 /* GoogleMaps.framework */,
 				C9C74BCA17952687007AAFE2 /* Foundation.framework */,
 				C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */,
 				C9C74BCE17952687007AAFE2 /* UIKit.framework */,
@@ -231,6 +286,7 @@
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				C9C74BDE17952687007AAFE2 /* Main.storyboard in Resources */,
+				C9C74C0217952C3B007AAFE2 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,10 +430,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCity/MyCity-Prefix.pch";
 				INFOPLIST_FILE = "MyCity/MyCity-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -387,10 +449,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCity/MyCity-Prefix.pch";
 				INFOPLIST_FILE = "MyCity/MyCity-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -454,6 +522,7 @@
 				C9C74BFB17952687007AAFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9C74BFC17952687007AAFE2 /* Build configuration list for PBXNativeTarget "MyCityTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +531,7 @@
 				C9C74BFE17952687007AAFE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
