@@ -35,6 +35,10 @@
      marker.title = @"Sydney";
      marker.snippet = @"Australia";
      marker.map = self.mapView;*/
+    UIImage *background = [UIImage imageNamed:@"city-at-night-shmlcbm.jpg"];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:background];
+    backgroundView.frame = CGRectMake(0, 0, backgroundView.frame.size.width, backgroundView.frame.size.height);
+    //self.view = backgroundView;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
