@@ -76,7 +76,24 @@
 - (IBAction)addGeoInfo:(id)sender {
     
     [self addNewCoordinate];
+    
+    
+    UILabel *newGeoInfoAddedPrompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 179, 32)];
+    newGeoInfoAddedPrompt.textAlignment = NSTextAlignmentCenter;
+    newGeoInfoAddedPrompt.textColor = [UIColor redColor];
+    newGeoInfoAddedPrompt.textColor = [UIColor whiteColor];
+    newGeoInfoAddedPrompt.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(13.0)];
+    [self.MapView addSubview:newGeoInfoAddedPrompt];
+    newGeoInfoAddedPrompt.text = @"new coordinate added";
+    
+    //[UIView animateWithDuration:1
+                     //animations:^{
+                        // newGeoInfoAddedPrompt.alpha = 0.0;
+                       //  [newGeoInfoAddedPrompt removeFromSuperview];
+                   //  }];
 }
+
+
 
 
 -(void)setCityName:(NSString*)cityName{
