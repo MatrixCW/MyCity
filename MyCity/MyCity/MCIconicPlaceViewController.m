@@ -7,6 +7,7 @@
 //
 
 #import "MCIconicPlaceViewController.h"
+#import "MCDemographicViewController.h"
 @interface MCIconicPlaceViewController ()
 @property BOOL newMedia;
 @end
@@ -108,6 +109,12 @@
    [alert show];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"PicToDemographic"]){
+        MCDemographicViewController *demoVC = segue.destinationViewController;
+        demoVC.mode = 1;
+    }
+}
 #pragma UIActionSheetDelegate
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     //Get the name of the current pressed button

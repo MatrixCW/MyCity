@@ -14,7 +14,7 @@
 @end
 
 @implementation MCDemographicViewController
-
+@synthesize mode;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,8 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self setUpTextView];
-    [self setUpPieChartView];
+    NSLog(@"ffaafafafaa: %d", self.mode);
+    if(self.mode == 1)
+        [self setUpTextView];
+    else
+        [self setUpPieChartView];
 	// Do any additional setup after loading the view.
 }
 

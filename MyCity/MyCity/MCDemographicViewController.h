@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *cityNameTag;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property NSString *currentCityName;
-
+@property NSInteger mode;
 - (void)setCityName:(NSString *)name;
 @end

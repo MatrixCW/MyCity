@@ -8,7 +8,6 @@
 
 #import "MCGeoLocationViewController.h"
 #import "MCGeoInfoTetrad.h"
-
 @implementation MCGeoLocationViewController
 
 
