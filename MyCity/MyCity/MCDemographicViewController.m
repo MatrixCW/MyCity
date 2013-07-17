@@ -95,6 +95,11 @@
 }
 
 - (void)pieChart:(XYPieChart *)pieChart didSelectSliceAtIndex:(NSUInteger)index{
-    
+    for (UIView *view in [self.contentView subviews]){
+        if(view.tag == 2){
+            UILabel *label = (UILabel *)view;
+            label.text = @"hahahahaha";
+        }
+    }
 }
 @end
