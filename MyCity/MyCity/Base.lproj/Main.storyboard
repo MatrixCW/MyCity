@@ -82,7 +82,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jO1-gn-EB4" kind="push" id="Dmv-Q8-HaF"/>
+                                    <segue destination="jO1-gn-EB4" kind="push" identifier="SegueToCity" id="Dmv-Q8-HaF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -90,6 +90,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Hx7-Vk-RbR"/>
+                    <connections>
+                        <outlet property="searchField" destination="wjL-e6-Kg3" id="MS5-mp-Ujs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D8X-ot-fcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,22 +166,6 @@
             <point key="canvasLocation" x="-757" y="-460"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MCEnterCityViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCEnterCityViewController.h"/>
-        </class>
-        <class className="MCGeoLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addGeoInfo:"/>
-                <relationship kind="outlet" name="CityNameTag" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="GoolgeMapView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MCViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

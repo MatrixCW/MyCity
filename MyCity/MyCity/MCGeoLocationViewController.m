@@ -70,8 +70,8 @@
 }
 
 -(void)setCityName:(NSString*)cityName{
-    
-    self.CityNameTag.text = cityName;
-    
+    NSLog(@"%@",cityName);
+    //self.CityNameTag.text = cityName;
+    NSLog(@"cityname text:%@",self.CityNameTag.text);
 }
 @end
