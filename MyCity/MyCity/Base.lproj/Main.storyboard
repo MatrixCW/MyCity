@@ -159,6 +159,7 @@
                                 </state>
                                 <connections>
                                     <action selector="showAddedCoordinates:" destination="jO1-gn-EB4" eventType="touchUpInside" id="Upz-2D-E0k"/>
+                                    <segue destination="wQO-Uq-knY" kind="modal" id="IZM-6W-HQf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -173,7 +174,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="684-HE-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="470" y="-460"/>
+            <point key="canvasLocation" x="426" y="-458"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V6g-5i-5pl">
+            <objects>
+                <viewController id="wQO-Uq-knY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JLa-Dh-izl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qim-U4-c3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-458"/>
         </scene>
         <!--Demographic View Controller-->
         <scene sceneID="gkK-Fn-Aor">
