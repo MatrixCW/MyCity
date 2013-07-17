@@ -103,4 +103,6 @@
     self.currentCityName = cityName;
    
 }
+- (IBAction)showAddedCoordinates:(id)sender {
+}
 @end
