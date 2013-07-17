@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */; };
+		4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */; };
+		4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -58,6 +60,10 @@
 /* Begin PBXFileReference section */
 		4B4EBFCD179684D100BE0DA9 /* MCIconicPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIconicPlaceViewController.h; sourceTree = "<group>"; };
 		4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCIconicPlaceViewController.m; sourceTree = "<group>"; };
+		4B4EBFD01796CC1F00BE0DA9 /* MCDemographicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDemographicViewController.h; sourceTree = "<group>"; };
+		4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDemographicViewController.m; sourceTree = "<group>"; };
+		4B4EBFD31796D2B800BE0DA9 /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
+		4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -143,6 +149,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B4EBFD61796D2C000BE0DA9 /* XYPieChart */ = {
+			isa = PBXGroup;
+			children = (
+				4B4EBFD31796D2B800BE0DA9 /* XYPieChart.h */,
+				4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */,
+			);
+			name = XYPieChart;
+			sourceTree = "<group>";
+		};
 		4BFE93551795483A00C875D4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +217,7 @@
 		C9C74BD017952687007AAFE2 /* MyCity */ = {
 			isa = PBXGroup;
 			children = (
+				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
@@ -217,6 +233,8 @@
 				4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */,
 				4BFE93521795315900C875D4 /* MCLogInViewController.h */,
 				4BFE93531795315900C875D4 /* MCLogInViewController.m */,
+				4B4EBFD01796CC1F00BE0DA9 /* MCDemographicViewController.h */,
+				4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */,
 				C9C74BE217952687007AAFE2 /* Images.xcassets */,
 				C9C74BD117952687007AAFE2 /* Supporting Files */,
 			);
@@ -352,12 +370,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
+				4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */,
 				4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */,
 				C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
+				4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */,
 				C9C74BD717952687007AAFE2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@
     [super viewDidLoad];
     [self.addOwnPhoto addTarget:self action:@selector(pickPhotoButtonPressed:)
                forControlEvents:UIControlEventTouchUpInside];
-    UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"city-at-night-shmlcbm.jpg"]];
+    PFImageView *image = [[PFImageView alloc] initWithImage:[UIImage imageNamed:@"city-at-night-shmlcbm.jpg"]];
     image.frame = self.photoView.frame;
     self.photoView = image;
     self.photoView.userInteractionEnabled = YES;
@@ -49,6 +49,7 @@
                                   otherButtonTitles:takePhoto, enterURL, cameraRoll, nil];
     [actionSheet showInView:self.view];
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -125,6 +126,7 @@
         NSLog(@"Cancel pressed --> Cancel ActionSheet");
     }
 }
+
 #pragma UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -147,8 +149,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
         UIImage *image = info[UIImagePickerControllerOriginalImage];
-        
-        self.photoView.frame = CGRectMake(self.photoView.frame.origin.x,self.photoView.frame.origin.x, image.size.width, image.size.height);
         self.photoView.image = image;
         if (self.newMedia)
             UIImageWriteToSavedPhotosAlbum(image,
