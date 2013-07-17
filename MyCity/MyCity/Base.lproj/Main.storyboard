@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLv-gs-uFG">
-                                <rect key="frame" x="222" y="482" width="73" height="44"/>
+                                <rect key="frame" x="238" y="510" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Confirm">
@@ -131,7 +131,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-Iy-4Qt">
-                                <rect key="frame" x="0.0" y="105" width="320" height="350"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="432"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
                         </subviews>
@@ -141,6 +141,7 @@
                     <navigationItem key="navigationItem" id="TGh-bS-Le2"/>
                     <connections>
                         <outlet property="CityNameTag" destination="Lqe-6E-gtl" id="rLF-0w-hg1"/>
+                        <outlet property="MapView" destination="KO9-Iy-4Qt" id="ovt-iM-8N1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="684-HE-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>

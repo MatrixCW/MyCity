@@ -7,16 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MapKit.h>
 
 @interface MCGeoLocationViewController : UIViewController
 
 
 @property (weak, nonatomic) IBOutlet UILabel *CityNameTag;
+@property (weak, nonatomic) IBOutlet MKMapView *MapView;
 
 
 @property NSMutableArray *GeoLocationInfo;
-@property NSString *curentCityName;
+@property NSString *currentCityName;
 
 - (IBAction)addGeoInfo:(id)sender;
 

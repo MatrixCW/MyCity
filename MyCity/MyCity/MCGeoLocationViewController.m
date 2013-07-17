@@ -7,8 +7,7 @@
 //
 
 #import "MCGeoLocationViewController.h"
-#import "MCGeoLocationTriplet.h"
-
+#import "MCGeoInfoTetrad.h"
 
 @implementation MCGeoLocationViewController
 
@@ -18,22 +17,39 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-        
+    
+    self.GeoLocationInfo = [[NSMutableArray alloc] init];
+    
+    [self performSelector:@selector(updateCityNameTag)
+               withObject:nil
+               afterDelay:0.3];
+    
+}
+
+
+-(void)updateCityNameTag{
+    
+    self.CityNameTag.text = self.currentCityName;
+    self.CityNameTag.textAlignment = NSTextAlignmentCenter;
+    
 }
 
 
 -(void)addNewCoordinate{
     
-    //CGFloat currentLatitude  = self.mapView.camera.target.latitude;
-    //CGFloat currentLongitude = self.mapView.camera.target.longitude;
-    //CGFloat currentZoomLevel = self.mapView.camera.zoom;
+    [self.GeoLocationInfo addObject:[self getCurrentMapViewInfo]];
     
-    //MCGeoLocationTriplet *tempGeoInfo = [MCGeoLocationTriplet initWithLatitude:currentLatitude
-                                                                    // Longitude:currentLongitude
-                                                                 // andZoomLevel:currentZoomLevel];
+}
+
+
+-(MCGeoInfoTetrad*)getCurrentMapViewInfo{
+
     
-   // [self.GeoLocationInfo addObject:tempGeoInfo];
-   //[self showNewCoordinate];
+    return [MCGeoInfoTetrad initWithLatitude:self.MapView.region.center.latitude
+                                   Longitude:self.MapView.region.center.longitude
+                               latitudeDelta:self.MapView.region.span.latitudeDelta
+                           andlongitudeDelta:self.MapView.region.span.longitudeDelta];
+    
 }
 
 
@@ -41,8 +57,8 @@
     
     for(id object in self.GeoLocationInfo){
         
-        if([object isKindOfClass:[MCGeoLocationTriplet class]]){
-            MCGeoLocationTriplet *temp = (MCGeoLocationTriplet*)object;
+        if([object isKindOfClass:[MCGeoInfoTetrad class]]){
+            MCGeoInfoTetrad *temp = (MCGeoInfoTetrad*)object;
             [temp showInfo];
             
         }
@@ -64,7 +80,8 @@
 
 
 -(void)setCityName:(NSString*)cityName{
-    self.curentCityName = cityName;
-    NSLog(@"cityname text:%@",self.curentCityName);
+    
+    self.currentCityName = cityName;
+   
 }
 @end
