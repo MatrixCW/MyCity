@@ -8,7 +8,7 @@
 
 #import "MCEnterCityViewController.h"
 @interface MCEnterCityViewController ()
-
+- (void)setCityName:(NSString *)name; //hide undeclared selector warning
 @end
 
 @implementation MCEnterCityViewController
@@ -37,13 +37,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"SegueToCity"]) {
-        [segue.destinationViewController performSelector:@selector(setCityName:) withObject:self.searchField.text];
+        [segue.destinationViewController performSelector:@selector(setCityName:) withObject:[self parseCityName:self.searchField.text]];
     }
+}
+
+- (NSString *)parseCityName: (NSString *)text{
+    return [[text lowercaseString]
+            stringByReplacingOccurrencesOfString:@" " withString:@""];
 }
 
 #pragma UITextFieldDelegate Methods
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
+    [self performSegueWithIdentifier:@"SegueToCity" sender:self];
     [textField resignFirstResponder];
     
     return YES;

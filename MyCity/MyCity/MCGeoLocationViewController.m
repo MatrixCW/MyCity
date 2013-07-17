@@ -25,7 +25,8 @@
     self.mapView.myLocationEnabled = YES;
     [self.GoolgeMapView addSubview:self.mapView];
     self.GeoLocationInfo = [[NSMutableArray alloc] init];
-
+    self.CityNameTag.text = self.curentCityName;
+    
 }
 
 
@@ -71,7 +72,7 @@
 
 -(void)setCityName:(NSString*)cityName{
     NSLog(@"%@",cityName);
-    //self.CityNameTag.text = cityName;
-    NSLog(@"cityname text:%@",self.CityNameTag.text);
+    self.curentCityName = cityName;
+    NSLog(@"cityname text:%@",self.curentCityName);
 }
 @end

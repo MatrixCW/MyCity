@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -20,11 +21,11 @@
 		4BFE934D17952E4800C875D4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934C17952E4700C875D4 /* AdSupport.framework */; };
 		4BFE934F17952E5700C875D4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934E17952E5700C875D4 /* libsqlite3.dylib */; };
 		4BFE935117952E6200C875D4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE935017952E6200C875D4 /* Social.framework */; };
-		C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */; };
-		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE93531795315900C875D4 /* MCLogInViewController.m */; };
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
 		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
+		C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */; };
+		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
 		C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */; };
 		C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCE17952687007AAFE2 /* UIKit.framework */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B4EBFCD179684D100BE0DA9 /* MCIconicPlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCIconicPlaceViewController.h; sourceTree = "<group>"; };
+		4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCIconicPlaceViewController.m; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -79,13 +82,13 @@
 		4BFE934C17952E4700C875D4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4BFE934E17952E5700C875D4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BFE935017952E6200C875D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
-		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		4BFE93521795315900C875D4 /* MCLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLogInViewController.h; sourceTree = "<group>"; };
 		4BFE93531795315900C875D4 /* MCLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLogInViewController.m; sourceTree = "<group>"; };
 		4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-at-night-shmlcbm.jpg"; sourceTree = "<group>"; };
 		4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEnterCityViewController.h; sourceTree = "<group>"; };
 		4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEnterCityViewController.m; sourceTree = "<group>"; };
+		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
+		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		C9C74BC717952687007AAFE2 /* MyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C74BCA17952687007AAFE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BFE933D17952C7200C875D4 /* MobileCoreServices.framework in Frameworks */,
 				C9C74C1A17952CF5007AAFE2 /* SystemConfiguration.framework in Frameworks */,
 				C9C74C1817952CED007AAFE2 /* QuartzCore.framework in Frameworks */,
 				C9C74C1617952CE5007AAFE2 /* OpenGLES.framework in Frameworks */,
@@ -146,7 +150,6 @@
 				4BFE934B17952E4200C875D4 /* Accounts.framework in Frameworks */,
 				4BFE934317952C8500C875D4 /* StoreKit.framework in Frameworks */,
 				4BFE934117952C8000C875D4 /* Security.framework in Frameworks */,
-				4BFE933D17952C7200C875D4 /* MobileCoreServices.framework in Frameworks */,
 				4BFE933B17952C6B00C875D4 /* libz.1.1.3.dylib in Frameworks */,
 				C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */,
 				4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */,
@@ -251,6 +254,8 @@
 				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
 				C9C74C1F1795446B007AAFE2 /* MCGeoLocationTriplet.h */,
 				C9C74C201795446B007AAFE2 /* MCGeoLocationTriplet.m */,
+				4B4EBFCD179684D100BE0DA9 /* MCIconicPlaceViewController.h */,
+				4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */,
 				4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */,
 				4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */,
 				4BFE93521795315900C875D4 /* MCLogInViewController.h */,
@@ -391,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
+				4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */,
 				C94AA59A179544E500910CA2 /* MCGeoLocationTriplet.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
@@ -527,6 +533,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCity/MyCity-Prefix.pch";
 				INFOPLIST_FILE = "MyCity/MyCity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
@@ -547,6 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyCity/MyCity-Prefix.pch";
 				INFOPLIST_FILE = "MyCity/MyCity-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = armv7;
