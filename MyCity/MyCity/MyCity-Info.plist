@@ -22,6 +22,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>522756034427192</string>
+	<key>FacebookDisplayName</key>
+	<string>Mycity</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
@@ -30,10 +34,6 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>FacebookAppID</key>
-	<string>522756034427192</string>
-	<key>FacebookDisplayName</key>
-	<string>Mycity</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

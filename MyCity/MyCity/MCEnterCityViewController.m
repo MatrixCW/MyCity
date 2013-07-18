@@ -7,17 +7,28 @@
 //
 
 #import "MCEnterCityViewController.h"
+#import "TRAutocompleteView.h"
+#import "TRGoogleMapsAutocompleteItemsSource.h"
+#import "TRGoogleMapsAutocompleteItemsSource.h"
+#import "TRTextFieldExtensions.h"
+#import "TRGoogleMapsAutocompletionCellFactory.h"
 @interface MCEnterCityViewController ()
 
 @end
 
 @implementation MCEnterCityViewController
-
+{
+TRAutocompleteView *_autocompleteView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.searchField.delegate = self;
+    _autocompleteView = [TRAutocompleteView autocompleteViewBindedTo:self.searchField
+                                                         usingSource:[[TRGoogleMapsAutocompleteItemsSource alloc] initWithMinimumCharactersToTrigger:2 apiKey:@"AIzaSyBrvw8knCr5oIlIdleJVjTFhP3_TXxM4ow"]
+                                                         cellFactory:[[TRGoogleMapsAutocompletionCellFactory alloc] initWithCellForegroundColor:[UIColor lightGrayColor] fontSize:14]
+                                                        presentingIn:self];
 	// Do any additional setup after loading the view.
 }
 
