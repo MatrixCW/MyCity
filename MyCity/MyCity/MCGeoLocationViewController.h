@@ -21,7 +21,9 @@
 
 @property NSMutableArray *GeoLocationInfo;
 @property NSString *currentCityName;
+@property NSString *formattedCityName;
 @property int remainingSlots;
+@property NSArray *locationInfo;
 
 
 
