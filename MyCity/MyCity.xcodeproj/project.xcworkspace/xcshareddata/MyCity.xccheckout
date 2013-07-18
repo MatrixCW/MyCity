@@ -8,6 +8,8 @@
 	<string>MyCity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
+		<string>git://github.com/TarasRoshko/TRAutocompleteView.git</string>
 		<key>2FF970F1-5456-42CF-B3A5-D25E588C853E</key>
 		<string>ssh://github.com/MatrixCW/MyCity.git</string>
 	</dict>
@@ -15,6 +17,10 @@
 	<string>MyCity/MyCity.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>060E46B1-3528-4D3F-91DD-92E880251700</key>
+		<string>../../MyCity/TRAutocompleteView</string>
+		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
+		<string>../../../thirdparty/TRAutocompleteView</string>
 		<key>2FF970F1-5456-42CF-B3A5-D25E588C853E</key>
 		<string>../../..</string>
 	</dict>
@@ -33,6 +39,22 @@
 			<string>2FF970F1-5456-42CF-B3A5-D25E588C853E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MyCity</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>060E46B1-3528-4D3F-91DD-92E880251700</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TRAutocompleteView</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2E98D3F1-3889-458F-A97C-B4288014F4CE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TRAutocompleteView</string>
 		</dict>
 	</array>
 </dict>

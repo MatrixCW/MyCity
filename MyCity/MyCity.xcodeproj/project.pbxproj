@@ -10,6 +10,21 @@
 		4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */; };
 		4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */; };
 		4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */; };
+		4BA338C11797EFD200A660A3 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338AF1797EFD200A660A3 /* AFHTTPClient.m */; };
+		4BA338C21797EFD200A660A3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338B11797EFD200A660A3 /* AFHTTPRequestOperation.m */; };
+		4BA338C31797EFD200A660A3 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338B31797EFD200A660A3 /* AFImageRequestOperation.m */; };
+		4BA338C41797EFD200A660A3 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338B51797EFD200A660A3 /* AFJSONRequestOperation.m */; };
+		4BA338C51797EFD200A660A3 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338B71797EFD200A660A3 /* AFNetworkActivityIndicatorManager.m */; };
+		4BA338C61797EFD200A660A3 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338BA1797EFD200A660A3 /* AFPropertyListRequestOperation.m */; };
+		4BA338C71797EFD200A660A3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338BC1797EFD200A660A3 /* AFURLConnectionOperation.m */; };
+		4BA338C81797EFD200A660A3 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338BE1797EFD200A660A3 /* AFXMLRequestOperation.m */; };
+		4BA338C91797EFD200A660A3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338C01797EFD200A660A3 /* UIImageView+AFNetworking.m */; };
+		4BA338D91797F02000A660A3 /* TRAutocompleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338CD1797F02000A660A3 /* TRAutocompleteView.m */; };
+		4BA338DA1797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338D01797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
+		4BA338DB1797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338D21797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.m */; };
+		4BA338DC1797F02000A660A3 /* TRGoogleMapsSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338D41797F02000A660A3 /* TRGoogleMapsSuggestion.m */; };
+		4BA338DD1797F02000A660A3 /* TRStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338D61797F02000A660A3 /* TRStringExtensions.m */; };
+		4BA338DE1797F02000A660A3 /* TRTextFieldExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338D81797F02000A660A3 /* TRTextFieldExtensions.m */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -64,6 +79,39 @@
 		4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDemographicViewController.m; sourceTree = "<group>"; };
 		4B4EBFD31796D2B800BE0DA9 /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
 		4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
+		4BA338AE1797EFD200A660A3 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		4BA338AF1797EFD200A660A3 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		4BA338B01797EFD200A660A3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		4BA338B11797EFD200A660A3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		4BA338B21797EFD200A660A3 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		4BA338B31797EFD200A660A3 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		4BA338B41797EFD200A660A3 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		4BA338B51797EFD200A660A3 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		4BA338B61797EFD200A660A3 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		4BA338B71797EFD200A660A3 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		4BA338B81797EFD200A660A3 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		4BA338B91797EFD200A660A3 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		4BA338BA1797EFD200A660A3 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		4BA338BB1797EFD200A660A3 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		4BA338BC1797EFD200A660A3 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		4BA338BD1797EFD200A660A3 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		4BA338BE1797EFD200A660A3 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		4BA338BF1797EFD200A660A3 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		4BA338C01797EFD200A660A3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		4BA338CB1797F02000A660A3 /* TRAutocompleteItemsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteItemsSource.h; sourceTree = "<group>"; };
+		4BA338CC1797F02000A660A3 /* TRAutocompleteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteView.h; sourceTree = "<group>"; };
+		4BA338CD1797F02000A660A3 /* TRAutocompleteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAutocompleteView.m; sourceTree = "<group>"; };
+		4BA338CE1797F02000A660A3 /* TRAutocompletionCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompletionCellFactory.h; sourceTree = "<group>"; };
+		4BA338CF1797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsAutocompleteItemsSource.h; sourceTree = "<group>"; };
+		4BA338D01797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsAutocompleteItemsSource.m; sourceTree = "<group>"; };
+		4BA338D11797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsAutocompletionCellFactory.h; sourceTree = "<group>"; };
+		4BA338D21797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsAutocompletionCellFactory.m; sourceTree = "<group>"; };
+		4BA338D31797F02000A660A3 /* TRGoogleMapsSuggestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGoogleMapsSuggestion.h; sourceTree = "<group>"; };
+		4BA338D41797F02000A660A3 /* TRGoogleMapsSuggestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGoogleMapsSuggestion.m; sourceTree = "<group>"; };
+		4BA338D51797F02000A660A3 /* TRStringExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRStringExtensions.h; sourceTree = "<group>"; };
+		4BA338D61797F02000A660A3 /* TRStringExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRStringExtensions.m; sourceTree = "<group>"; };
+		4BA338D71797F02000A660A3 /* TRTextFieldExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTextFieldExtensions.h; sourceTree = "<group>"; };
+		4BA338D81797F02000A660A3 /* TRTextFieldExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTextFieldExtensions.m; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -158,6 +206,54 @@
 			name = XYPieChart;
 			sourceTree = "<group>";
 		};
+		4BA338AD1797EFD200A660A3 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				4BA338AE1797EFD200A660A3 /* AFHTTPClient.h */,
+				4BA338AF1797EFD200A660A3 /* AFHTTPClient.m */,
+				4BA338B01797EFD200A660A3 /* AFHTTPRequestOperation.h */,
+				4BA338B11797EFD200A660A3 /* AFHTTPRequestOperation.m */,
+				4BA338B21797EFD200A660A3 /* AFImageRequestOperation.h */,
+				4BA338B31797EFD200A660A3 /* AFImageRequestOperation.m */,
+				4BA338B41797EFD200A660A3 /* AFJSONRequestOperation.h */,
+				4BA338B51797EFD200A660A3 /* AFJSONRequestOperation.m */,
+				4BA338B61797EFD200A660A3 /* AFNetworkActivityIndicatorManager.h */,
+				4BA338B71797EFD200A660A3 /* AFNetworkActivityIndicatorManager.m */,
+				4BA338B81797EFD200A660A3 /* AFNetworking.h */,
+				4BA338B91797EFD200A660A3 /* AFPropertyListRequestOperation.h */,
+				4BA338BA1797EFD200A660A3 /* AFPropertyListRequestOperation.m */,
+				4BA338BB1797EFD200A660A3 /* AFURLConnectionOperation.h */,
+				4BA338BC1797EFD200A660A3 /* AFURLConnectionOperation.m */,
+				4BA338BD1797EFD200A660A3 /* AFXMLRequestOperation.h */,
+				4BA338BE1797EFD200A660A3 /* AFXMLRequestOperation.m */,
+				4BA338BF1797EFD200A660A3 /* UIImageView+AFNetworking.h */,
+				4BA338C01797EFD200A660A3 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		4BA338CA1797F02000A660A3 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4BA338CB1797F02000A660A3 /* TRAutocompleteItemsSource.h */,
+				4BA338CC1797F02000A660A3 /* TRAutocompleteView.h */,
+				4BA338CD1797F02000A660A3 /* TRAutocompleteView.m */,
+				4BA338CE1797F02000A660A3 /* TRAutocompletionCellFactory.h */,
+				4BA338CF1797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.h */,
+				4BA338D01797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */,
+				4BA338D11797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.h */,
+				4BA338D21797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.m */,
+				4BA338D31797F02000A660A3 /* TRGoogleMapsSuggestion.h */,
+				4BA338D41797F02000A660A3 /* TRGoogleMapsSuggestion.m */,
+				4BA338D51797F02000A660A3 /* TRStringExtensions.h */,
+				4BA338D61797F02000A660A3 /* TRStringExtensions.m */,
+				4BA338D71797F02000A660A3 /* TRTextFieldExtensions.h */,
+				4BA338D81797F02000A660A3 /* TRTextFieldExtensions.m */,
+			);
+			name = src;
+			path = ../../thirdparty/TRAutocompleteView/src;
+			sourceTree = "<group>";
+		};
 		4BFE93551795483A00C875D4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +313,8 @@
 		C9C74BD017952687007AAFE2 /* MyCity */ = {
 			isa = PBXGroup;
 			children = (
+				4BA338CA1797F02000A660A3 /* src */,
+				4BA338AD1797EFD200A660A3 /* AFNetworking */,
 				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
@@ -369,16 +467,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA338C71797EFD200A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
+				4BA338DA1797F02000A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */,
 				4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */,
+				4BA338C21797EFD200A660A3 /* AFHTTPRequestOperation.m in Sources */,
 				C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */,
+				4BA338C81797EFD200A660A3 /* AFXMLRequestOperation.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
+				4BA338DC1797F02000A660A3 /* TRGoogleMapsSuggestion.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
+				4BA338DD1797F02000A660A3 /* TRStringExtensions.m in Sources */,
+				4BA338DB1797F02000A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
+				4BA338D91797F02000A660A3 /* TRAutocompleteView.m in Sources */,
 				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
+				4BA338C31797EFD200A660A3 /* AFImageRequestOperation.m in Sources */,
 				4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */,
+				4BA338C91797EFD200A660A3 /* UIImageView+AFNetworking.m in Sources */,
+				4BA338C11797EFD200A660A3 /* AFHTTPClient.m in Sources */,
+				4BA338C41797EFD200A660A3 /* AFJSONRequestOperation.m in Sources */,
+				4BA338C51797EFD200A660A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				C9C74BD717952687007AAFE2 /* main.m in Sources */,
+				4BA338C61797EFD200A660A3 /* AFPropertyListRequestOperation.m in Sources */,
+				4BA338DE1797F02000A660A3 /* TRTextFieldExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
