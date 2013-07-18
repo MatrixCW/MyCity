@@ -88,12 +88,12 @@
                                                             success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
                                                             {
                                                                 NSMutableArray *suggestions = [[NSMutableArray alloc] init];
-                                                                NSArray *predictions = [JSON objectForKey:@"predictions"];
+                                                                NSArray *predictions = [JSON objectForKey:@"results"];
 
                                                                 for (NSDictionary *place in predictions)
                                                                 {
                                                                     TRGoogleMapsSuggestion
-                                                                            *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"description"]];
+                                                                            *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"formatted_address"]];
                                                                     [suggestions addObject:suggestion];
                                                                 }
 
@@ -125,10 +125,8 @@
 
 - (NSString*) autocompleteUrlFor:(NSString*)query
 {
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/autocomplete/json?input=%@",
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false",
                                                   [query urlEncode]];
-
-    [urlString appendFormat:@"&key=%@", _apiKey];
 
     if (CLLocationCoordinate2DIsValid(self.location))
     {
