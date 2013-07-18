@@ -8,10 +8,14 @@
 
 #import "MCGeoLocationViewController.h"
 #import "MCGeoInfoTetrad.h"
+#import "TRAutocompleteView.h"
+#import "TRGoogleMapsAutocompleteItemsSource.h"
+#import "TRGoogleMapsAutocompletionCellFactory.h"
+#import "AFJSONRequestOperation.h"
 
-
-
-@implementation MCGeoLocationViewController
+@implementation MCGeoLocationViewController{
+    TRAutocompleteView *_autocompleteView;
+}
 
 
 
@@ -24,9 +28,29 @@
     
     self.remainingSlots = 3;
     
-
+    [self setUpSuggestionView];
+    [self addShadowToView];
+    
 }
 
+//add shadow to inputfield and autocompleteView.
+- (void)addShadowToView{
+    self.InputTextField.layer.masksToBounds = NO;
+    self.InputTextField.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.InputTextField.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    self.InputTextField.layer.shadowOpacity = 0.5f;
+    _autocompleteView.layer.masksToBounds = NO;
+    _autocompleteView.layer.shadowColor = [UIColor blackColor].CGColor;
+    _autocompleteView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    _autocompleteView.layer.shadowOpacity = 0.5f;
+}
+
+-(void)setUpSuggestionView{
+    _autocompleteView = [TRAutocompleteView autocompleteViewBindedTo:self.InputTextField
+                                                         usingSource:[[TRGoogleMapsAutocompleteItemsSource alloc] initWithMinimumCharactersToTrigger:2 apiKey:@"INSERT_YOUR_PLACES_API_KEY_HERE"]
+                                                         cellFactory:[[TRGoogleMapsAutocompletionCellFactory alloc] initWithCellForegroundColor:[UIColor lightGrayColor] fontSize:14]
+                                                        presentingIn:self];
+}
 
 
 #pragma adding coordinates
@@ -40,7 +64,7 @@
 
 
 -(MCGeoInfoTetrad*)getCurrentMapViewInfo{
-
+    
     
     return [MCGeoInfoTetrad initWithLatitude:self.MapView.region.center.latitude
                                    Longitude:self.MapView.region.center.longitude
@@ -104,7 +128,7 @@
             return;
             
         }
-    
+        
     }
 }
 
@@ -120,5 +144,42 @@
 
 
 - (IBAction)GoButtonPressed:(id)sender {
+    NSString *cityName = [[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"," withString:@" "] stringByReplacingOccurrencesOfString:@"  " withString:@" "] stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+    self.formattedCityName = cityName;
+    [self.InputTextField resignFirstResponder];
+    [self getCityGeoInfo];
+    
+}
+
+- (NSArray *)getCityGeoInfo
+{
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.formattedCityName]];
+    NSLog(@"url: %@",url);
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSArray *results = [NSArray array];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSArray *result = [JSON objectForKey:@"results"];
+        for (NSDictionary *place in result){
+
+            NSLog(@"%@", self.locationInfo);
+            [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
+        }
+        
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json){
+        NSLog(@"fail to get city info: %@",error.description);
+    }];
+    
+    [operation start];
+}
+
+
+- (NSArray *)parseGeoInfo:(NSDictionary *)place {
+    NSNumber *locationLat = [NSNumber numberWithFloat: [[place objectForKey:@"geometry"][@"location"][@"lat"] floatValue]];
+    NSNumber *locationLng = [NSNumber numberWithFloat: [[place objectForKey:@"geometry"][@"location"][@"lng"] floatValue]];
+    NSNumber *northEastLat =[NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"northeast"][@"lat"] floatValue]];
+    NSNumber *northEastLng =[NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"northeast"][@"lng"] floatValue]];
+    NSNumber *southWestLat = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lat"] floatValue]];
+    NSNumber *southWestLng = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lng"] floatValue]];
+    return [NSArray arrayWithObjects:locationLat, locationLng,northEastLat, northEastLng, southWestLat, southWestLng, nil];
 }
 @end
