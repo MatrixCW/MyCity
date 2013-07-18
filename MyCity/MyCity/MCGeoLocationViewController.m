@@ -24,26 +24,7 @@
     
     self.remainingSlots = 3;
     
-    [self performSelector:@selector(updateCityNameTag)
-               withObject:nil
-               afterDelay:0.3];
-    
-}
 
-
-#pragma city name info
-
--(void)setCityName:(NSString*)cityName{
-    
-    self.currentCityName = cityName;
-    
-}
-
--(void)updateCityNameTag{
-    
-    self.CityNameTag.text = self.currentCityName;
-    self.CityNameTag.textAlignment = NSTextAlignmentCenter;
-    
 }
 
 
@@ -68,21 +49,6 @@
     
 }
 
-
-- (IBAction)addGeoInfo:(id)sender {
-    
-    
-    
-    [self addNewCoordinate];
-    
-    self.remainingSlots--;
-    
-    
-    if(self.remainingSlots == 0)
-        [self disableConfirmButton];
-    
-    
-}
 
 -(void) showPrompt{
     
@@ -115,24 +81,6 @@
     
     [self.GeoLocationInfo removeAllObjects];
     self.remainingSlots = 3;
-    [self enableConfirmButton];
-    
-}
-
-
-#pragma about confirm button
-
--(void)enableConfirmButton{
-    
-    self.confirmButton.enabled = YES;
-    self.confirmButton.alpha = 1.0;
-    
-}
-
--(void)disableConfirmButton{
-    
-    self.confirmButton.enabled = NO;
-    self.confirmButton.alpha = 0.0;
     
 }
 
@@ -171,4 +119,6 @@
 
 
 
+- (IBAction)GoButtonPressed:(id)sender {
+}
 @end

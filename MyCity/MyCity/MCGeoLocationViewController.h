@@ -13,10 +13,10 @@
 
 @interface MCGeoLocationViewController : UIViewController
 
+- (IBAction)GoButtonPressed:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *CityNameTag;
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
-@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet UITextField *InputTextField;
 
 
 @property NSMutableArray *GeoLocationInfo;
@@ -24,8 +24,5 @@
 @property int remainingSlots;
 
 
-- (IBAction)addGeoInfo:(id)sender;
-
--(void)setCityName:(NSString*)cityName;
 
 @end

@@ -78,6 +78,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GoButtonPressed:" destination="jO1-gn-EB4" eventType="touchUpInside" id="zzs-0Z-qXo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -85,6 +88,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="TGh-bS-Le2"/>
                     <connections>
+                        <outlet property="InputTextField" destination="JCp-Lb-A23" id="9Yh-Pl-RO0"/>
                         <outlet property="MapView" destination="KO9-Iy-4Qt" id="ovt-iM-8N1"/>
                     </connections>
                 </viewController>
@@ -266,10 +270,10 @@
         <class className="MCGeoLocationViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
             <relationships>
-                <relationship kind="action" name="addGeoInfo:"/>
-                <relationship kind="outlet" name="CityNameTag" candidateClass="UILabel"/>
+                <relationship kind="action" name="GoButtonPressed:"/>
+                <relationship kind="outlet" name="InputText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="InputTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="confirmButton" candidateClass="UIButton"/>
             </relationships>
         </class>
         <class className="MCIconicPlaceViewController" superclassName="UIViewController">
