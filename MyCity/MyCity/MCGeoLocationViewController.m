@@ -51,6 +51,7 @@
 - (IBAction)SlidingButtonPressed:(id)sender {
     
     [self.slidingViewController anchorTopViewTo:ECRight];
+    [self.InputTextField resignFirstResponder];
     
 }
 
