@@ -271,7 +271,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
             <relationships>
                 <relationship kind="action" name="GoButtonPressed:"/>
-                <relationship kind="outlet" name="InputText" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="InputTextField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
             </relationships>
