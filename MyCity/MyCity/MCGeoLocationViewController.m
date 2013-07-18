@@ -178,16 +178,17 @@
 
 
 
-- (void)getCityGeoInfo
-{
+
+- (void)getCityGeoInfo{
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.formattedCityName]];
     NSLog(@"url: %@",url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
         for (NSDictionary *place in result){
+            self.formattedCityName = (NSString *)place[@"formatted_address"];
             self.locationInfo = [self parseGeoInfo:place];
-            NSLog(@"%@", self.locationInfo);
             [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
         }
         
@@ -199,7 +200,7 @@
 }
 
 
-- (NSArray *)parseGeoInfo:(NSDictionary *)place {
+- (NSArray *)parseGeoInfo:(NSDictionary *)place{
     NSNumber *locationLat = [NSNumber numberWithFloat: [[place objectForKey:@"geometry"][@"location"][@"lat"] floatValue]];
     NSNumber *locationLng = [NSNumber numberWithFloat: [[place objectForKey:@"geometry"][@"location"][@"lng"] floatValue]];
     NSNumber *northEastLat =[NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"northeast"][@"lat"] floatValue]];
