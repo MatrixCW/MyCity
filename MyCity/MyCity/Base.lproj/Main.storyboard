@@ -57,21 +57,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the City" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV8-TB-YQ8">
-                                <rect key="frame" x="112" y="130" width="144" height="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter City Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV8-TB-YQ8">
+                                <rect key="frame" x="88" y="131" width="144" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjL-e6-Kg3">
-                                <rect key="frame" x="88" y="240" width="144" height="30"/>
+                                <rect key="frame" x="88" y="221" width="144" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="se1-Na-Rky">
-                                <rect key="frame" x="124" y="334" width="73" height="44"/>
+                                <rect key="frame" x="217" y="214" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Go">
@@ -354,6 +354,43 @@
             <point key="canvasLocation" x="-242" y="-1101"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MCDemographicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCDemographicViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cityNameTag" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contentView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MCEnterCityViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCEnterCityViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MCGeoLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addGeoInfo:"/>
+                <relationship kind="action" name="showAddedCoordinates:"/>
+                <relationship kind="outlet" name="CityNameTag" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="MCIconicPlaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCIconicPlaceViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addOwnPhoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="photoView" candidateClass="PFImageView"/>
+            </relationships>
+        </class>
+        <class className="MCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCViewController.h"/>
+        </class>
+        <class className="PFImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFImageView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MCEnterCityViewController : UIViewController<UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 
 @end
