@@ -14,6 +14,8 @@
 @interface MCGeoLocationViewController : UIViewController
 
 - (IBAction)GoButtonPressed:(id)sender;
+- (IBAction)SlidingButtonPressed:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UITextField *InputTextField;
@@ -24,6 +26,7 @@
 @property NSString *formattedCityName;
 @property int remainingSlots;
 @property NSArray *locationInfo;
+
 
 
 

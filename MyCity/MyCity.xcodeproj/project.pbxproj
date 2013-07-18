@@ -60,6 +60,12 @@
 		C9C74C0817952C9D007AAFE2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C0717952C9D007AAFE2 /* CoreLocation.framework */; };
 		C9C74C1817952CED007AAFE2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1717952CED007AAFE2 /* QuartzCore.framework */; };
 		C9C74C1A17952CF5007AAFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */; };
+		C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8BB17983421005B8B4E /* ECSlidingViewController.m */; };
+		C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */; };
+		C9CAD8C4179834E3005B8B4E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C3179834E3005B8B4E /* MenuViewController.m */; };
+		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
+		C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */; };
+		C9CAD8CE179841E5005B8B4E /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAD8CD179841E5005B8B4E /* menuButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +162,17 @@
 		C9C74C0717952C9D007AAFE2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C9C74C1717952CED007AAFE2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C9CAD8BA17983421005B8B4E /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECSlidingViewController.h; sourceTree = "<group>"; };
+		C9CAD8BB17983421005B8B4E /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECSlidingViewController.m; sourceTree = "<group>"; };
+		C9CAD8BC17983421005B8B4E /* UIImage+ImageWithUIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageWithUIView.h"; sourceTree = "<group>"; };
+		C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
+		C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitSlidingViewController.h; sourceTree = "<group>"; };
+		C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitSlidingViewController.m; sourceTree = "<group>"; };
+		C9CAD8C2179834E3005B8B4E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C9CAD8C3179834E3005B8B4E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTableViewMessenger.h; sourceTree = "<group>"; };
+		C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoInfoTableViewMessenger.m; sourceTree = "<group>"; };
+		C9CAD8CD179841E5005B8B4E /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +273,7 @@
 		4BFE93551795483A00C875D4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C9CAD8CD179841E5005B8B4E /* menuButton.png */,
 				4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */,
 			);
 			name = Images;
@@ -312,14 +330,21 @@
 		C9C74BD017952687007AAFE2 /* MyCity */ = {
 			isa = PBXGroup;
 			children = (
+				C9CAD8B917983421005B8B4E /* ECSlidingViewController */,
 				4BA338F4179809E500A660A3 /* AFNetworking */,
 				4BA338DF179809B200A660A3 /* TRAutocompleteView */,
 				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
+				C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */,
+				C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */,
+				C9CAD8C2179834E3005B8B4E /* MenuViewController.h */,
+				C9CAD8C3179834E3005B8B4E /* MenuViewController.m */,
 				C9C74BDF17952687007AAFE2 /* MCViewController.h */,
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
+				C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */,
+				C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */,
 				C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */,
 				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
 				C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */,
@@ -365,6 +390,17 @@
 				C9C74BF217952687007AAFE2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9CAD8B917983421005B8B4E /* ECSlidingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAD8BA17983421005B8B4E /* ECSlidingViewController.h */,
+				C9CAD8BB17983421005B8B4E /* ECSlidingViewController.m */,
+				C9CAD8BC17983421005B8B4E /* UIImage+ImageWithUIView.h */,
+				C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */,
+			);
+			path = ECSlidingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +479,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CAD8CE179841E5005B8B4E /* menuButton.png in Resources */,
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
@@ -466,6 +503,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */,
+				C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */,
 				4BA3390A179809E500A660A3 /* AFImageRequestOperation.m in Sources */,
 				4BA33909179809E500A660A3 /* AFHTTPRequestOperation.m in Sources */,
 				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
@@ -477,15 +516,18 @@
 				4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
 				4BA3390D179809E500A660A3 /* AFPropertyListRequestOperation.m in Sources */,
 				C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */,
+				C9CAD8C4179834E3005B8B4E /* MenuViewController.m in Sources */,
 				4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */,
 				4BA338F1179809B200A660A3 /* TRGoogleMapsSuggestion.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				4BA338EF179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
+				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BA33908179809E500A660A3 /* AFHTTPClient.m in Sources */,
 				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
+				C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */,
 				4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */,
 				4BA338F2179809B200A660A3 /* TRStringExtensions.m in Sources */,
 				C9C74BD717952687007AAFE2 /* main.m in Sources */,

@@ -12,11 +12,16 @@
 #import "TRGoogleMapsAutocompleteItemsSource.h"
 #import "TRGoogleMapsAutocompletionCellFactory.h"
 #import "AFJSONRequestOperation.h"
+#import "ECSlidingViewController.h"
+#import "MenuViewController.h"
+#import "MCGeoInfoTableViewMessenger.h"
 
 @implementation MCGeoLocationViewController{
+    
     TRAutocompleteView *_autocompleteView;
-}
+    
 
+}
 
 
 - (void)viewDidLoad
@@ -31,7 +36,26 @@
     [self setUpSuggestionView];
     [self addShadowToView];
     
+    self.view.layer.shadowOpacity = 0.75f;
+    self.view.layer.shadowRadius = 10.0f;
+    self.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    
+    if(![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]){
+        self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
+    }
+    
+
+    
 }
+
+- (IBAction)SlidingButtonPressed:(id)sender {
+    
+    [self.slidingViewController anchorTopViewTo:ECRight];
+    
+}
+
+
+
 
 //add shadow to inputfield and autocompleteView.
 - (void)addShadowToView{
@@ -59,6 +83,7 @@
 -(void)addNewCoordinate{
     
     [self.GeoLocationInfo addObject:[self getCurrentMapViewInfo]];
+    [MCGeoInfoTableViewMessenger inputData:self.GeoLocationInfo];
     
 }
 
@@ -151,16 +176,17 @@
     
 }
 
-- (NSArray *)getCityGeoInfo
+
+
+- (void)getCityGeoInfo
 {
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.formattedCityName]];
     NSLog(@"url: %@",url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    NSArray *results = [NSArray array];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *result = [JSON objectForKey:@"results"];
         for (NSDictionary *place in result){
-
+            self.locationInfo = [self parseGeoInfo:place];
             NSLog(@"%@", self.locationInfo);
             [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
         }
@@ -182,4 +208,7 @@
     NSNumber *southWestLng = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lng"] floatValue]];
     return [NSArray arrayWithObjects:locationLat, locationLng,northEastLat, northEastLng, southWestLat, southWestLng, nil];
 }
+
+
+
 @end
