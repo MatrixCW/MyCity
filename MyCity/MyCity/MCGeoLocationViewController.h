@@ -24,6 +24,7 @@
 @property NSString *formattedCityName;
 @property int remainingSlots;
 @property NSArray *locationInfo;
+@property NSArray *geoCodeInfo;
 
 
 
