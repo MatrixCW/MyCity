@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
@@ -77,43 +77,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search for place" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JCp-Lb-A23">
-                                <rect key="frame" x="22" y="27" width="277" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sr8-l6-h9n">
+                                <rect key="frame" x="10" y="32" width="300" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mA-IJ-qjY">
-                                <rect key="frame" x="224" y="20" width="44" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Go !">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="GoButtonPressed:" destination="jO1-gn-EB4" eventType="touchUpInside" id="zzs-0Z-qXo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLH-mE-Dxs">
-                                <rect key="frame" x="27" y="31" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="menuButton.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="SlidingButtonPressed:" destination="jO1-gn-EB4" eventType="touchUpInside" id="V5S-pL-Q7y"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mA-IJ-qjY">
+                                        <rect key="frame" x="264" y="-5" width="44" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Go">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="GoButtonPressed:" destination="jO1-gn-EB4" eventType="touchUpInside" id="zzs-0Z-qXo"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="search for place" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="JCp-Lb-A23">
+                                        <rect key="frame" x="28" y="0.0" width="245" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLH-mE-Dxs">
+                                        <rect key="frame" x="6" y="5" width="20" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                        <state key="normal" backgroundImage="button.png">
+                                            <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SlidingButtonPressed:" destination="jO1-gn-EB4" eventType="touchUpInside" id="V5S-pL-Q7y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -122,6 +129,7 @@
                     <connections>
                         <outlet property="InputTextField" destination="JCp-Lb-A23" id="9Yh-Pl-RO0"/>
                         <outlet property="MapView" destination="KO9-Iy-4Qt" id="ovt-iM-8N1"/>
+                        <outlet property="containerView" destination="Sr8-l6-h9n" id="18m-aZ-k5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="684-HE-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,6 +165,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QX4-H5-Lr9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="619" y="-1282"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7kb-Az-Kbi">
+            <objects>
+                <viewController id="K6h-Qj-V0g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zDg-0H-bfa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kgi-yg-nRs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SO1-L4-J15">
+                                <rect key="frame" x="9" y="15" width="28" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RV7-UF-tvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-1283"/>
         </scene>
         <!--Demographic View Controller-->
         <scene sceneID="gkK-Fn-Aor">
@@ -322,8 +363,49 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menuButton.png" width="16" height="16"/>
+        <image name="button.png" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="InitSlidingViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitSlidingViewController.h"/>
+        </class>
+        <class className="MCDemographicViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCDemographicViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cityNameTag" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contentView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MCGeoLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="GoButtonPressed:"/>
+                <relationship kind="action" name="SlidingButtonPressed:"/>
+                <relationship kind="outlet" name="InputTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
+                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MCIconicPlaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCIconicPlaceViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addOwnPhoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="photoView" candidateClass="PFImageView"/>
+            </relationships>
+        </class>
+        <class className="MCViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+        </class>
+        <class className="PFImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFImageView.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

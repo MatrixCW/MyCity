@@ -3,50 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C8535DC5-930A-4DFD-857A-E83AC89C55C7</string>
+	<string>BAE4616F-2A93-4087-A417-4650C2CA78C6</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyCity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
 		<string>git://github.com/TarasRoshko/TRAutocompleteView.git</string>
-		<key>2FF970F1-5456-42CF-B3A5-D25E588C853E</key>
-		<string>ssh://github.com/MatrixCW/MyCity.git</string>
+		<key>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</key>
+		<string>https://github.com/MatrixCW/MyCity.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyCity/MyCity.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>060E46B1-3528-4D3F-91DD-92E880251700</key>
-		<string>../../MyCity/TRAutocompleteView</string>
 		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
 		<string>../../../thirdparty/TRAutocompleteView</string>
-		<key>2FF970F1-5456-42CF-B3A5-D25E588C853E</key>
+		<key>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/MatrixCW/MyCity.git</string>
+	<string>https://github.com/MatrixCW/MyCity.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>2FF970F1-5456-42CF-B3A5-D25E588C853E</string>
+	<string>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2FF970F1-5456-42CF-B3A5-D25E588C853E</string>
+			<string>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MyCity</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>060E46B1-3528-4D3F-91DD-92E880251700</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TRAutocompleteView</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

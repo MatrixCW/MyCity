@@ -16,7 +16,8 @@
 - (IBAction)GoButtonPressed:(id)sender;
 - (IBAction)SlidingButtonPressed:(id)sender;
 
-
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property UIView *buttonView;
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UITextField *InputTextField;
 

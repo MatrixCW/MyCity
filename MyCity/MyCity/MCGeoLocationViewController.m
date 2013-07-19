@@ -35,12 +35,12 @@
     
     [self setUpSuggestionView];
     [self addShadowToView:_autocompleteView];
-    [self addShadowToView:self.InputTextField];
-    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height, 300, 80)];
-    buttonView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:buttonView];
-    [self addShadowToView:buttonView];
-    buttonView.layer.opacity = 0.85;
+    [self addShadowToView:self.containerView];
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height, 300, 80)];
+    self.buttonView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.buttonView];
+    [self addShadowToView:self.buttonView];
+    self.buttonView.layer.opacity = 0.85;
     
     self.view.layer.shadowOpacity = 0.75f;
     self.view.layer.shadowRadius = 10.0f;
@@ -51,7 +51,7 @@
     }
     
 
-    [self performSelector:@selector(popupButtonView:) withObject:buttonView afterDelay:2];
+    [self performSelector:@selector(popupButtonView:) withObject:self.buttonView afterDelay:2];
     
 }
 
@@ -83,6 +83,7 @@
     view.layer.shadowColor = [UIColor blackColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
     view.layer.shadowOpacity = 0.5f;
+
 }
 
 -(void)setUpSuggestionView{

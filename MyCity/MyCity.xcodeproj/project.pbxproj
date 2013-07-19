@@ -65,7 +65,7 @@
 		C9CAD8C4179834E3005B8B4E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C3179834E3005B8B4E /* MenuViewController.m */; };
 		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
 		C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */; };
-		C9CAD8CE179841E5005B8B4E /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CAD8CD179841E5005B8B4E /* menuButton.png */; };
+		C9CBED0717990CBE006751D1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CBED0617990CBE006751D1 /* button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,7 +172,7 @@
 		C9CAD8C3179834E3005B8B4E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTableViewMessenger.h; sourceTree = "<group>"; };
 		C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoInfoTableViewMessenger.m; sourceTree = "<group>"; };
-		C9CAD8CD179841E5005B8B4E /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		C9CBED0617990CBE006751D1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,7 +273,7 @@
 		4BFE93551795483A00C875D4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C9CAD8CD179841E5005B8B4E /* menuButton.png */,
+				C9CBED0617990CBE006751D1 /* button.png */,
 				4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */,
 			);
 			name = Images;
@@ -479,8 +479,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CAD8CE179841E5005B8B4E /* menuButton.png in Resources */,
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
+				C9CBED0717990CBE006751D1 /* button.png in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
 				C9C74BDE17952687007AAFE2 /* Main.storyboard in Resources */,
