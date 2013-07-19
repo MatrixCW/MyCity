@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="619" y="-1282"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Preview Controller-->
         <scene sceneID="7kb-Az-Kbi">
             <objects>
-                <viewController id="K6h-Qj-V0g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapPreview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K6h-Qj-V0g" customClass="MapPreviewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDg-0H-bfa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,6 +189,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="MenuButtonPressed:" destination="K6h-Qj-V0g" eventType="touchUpInside" id="to6-ec-0nB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -365,47 +368,6 @@
     <resources>
         <image name="button.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="InitSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitSlidingViewController.h"/>
-        </class>
-        <class className="MCDemographicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCDemographicViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="cityNameTag" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="contentView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MCGeoLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="GoButtonPressed:"/>
-                <relationship kind="action" name="SlidingButtonPressed:"/>
-                <relationship kind="outlet" name="InputTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MCIconicPlaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCIconicPlaceViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addOwnPhoto" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="photoView" candidateClass="PFImageView"/>
-            </relationships>
-        </class>
-        <class className="MCViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-        </class>
-        <class className="PFImageView" superclassName="UIImageView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFImageView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

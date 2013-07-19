@@ -66,6 +66,7 @@
 		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
 		C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */; };
 		C9CBED0717990CBE006751D1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CBED0617990CBE006751D1 /* button.png */; };
+		C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CBED0917990E62006751D1 /* MapPreviewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +174,8 @@
 		C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTableViewMessenger.h; sourceTree = "<group>"; };
 		C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoInfoTableViewMessenger.m; sourceTree = "<group>"; };
 		C9CBED0617990CBE006751D1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		C9CBED0817990E62006751D1 /* MapPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPreviewController.h; sourceTree = "<group>"; };
+		C9CBED0917990E62006751D1 /* MapPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPreviewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +340,8 @@
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
+				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
+				C9CBED0917990E62006751D1 /* MapPreviewController.m */,
 				C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */,
 				C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */,
 				C9CAD8C2179834E3005B8B4E /* MenuViewController.h */,
@@ -523,6 +528,7 @@
 				4BA338EF179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
+				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
 				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BA33908179809E500A660A3 /* AFHTTPClient.m in Sources */,
