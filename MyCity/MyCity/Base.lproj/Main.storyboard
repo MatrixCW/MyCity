@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
@@ -365,47 +365,6 @@
     <resources>
         <image name="button.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="InitSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InitSlidingViewController.h"/>
-        </class>
-        <class className="MCDemographicViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCDemographicViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="cityNameTag" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="contentView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MCGeoLocationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCGeoLocationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="GoButtonPressed:"/>
-                <relationship kind="action" name="SlidingButtonPressed:"/>
-                <relationship kind="outlet" name="InputTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="MapView" candidateClass="MKMapView"/>
-                <relationship kind="outlet" name="containerView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="MCIconicPlaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCIconicPlaceViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="addOwnPhoto" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="photoView" candidateClass="PFImageView"/>
-            </relationships>
-        </class>
-        <class className="MCViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MCViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-        </class>
-        <class className="PFImageView" superclassName="UIImageView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PFImageView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

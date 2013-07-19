@@ -28,6 +28,7 @@
 @property int remainingSlots;
 @property NSArray *locationInfo;
 @property NSArray *geoCodeInfo;
+@property NSInteger mode;
 
 
 

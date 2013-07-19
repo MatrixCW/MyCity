@@ -19,42 +19,46 @@
 @implementation MCGeoLocationViewController{
     
     TRAutocompleteView *_autocompleteView;
+    BOOL needResetButtons;
     
-
 }
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    needResetButtons = true;
 	// Do any additional setup after loading the view.
     
     self.GeoLocationInfo = [[NSMutableArray alloc] init];
     
     self.remainingSlots = 3;
     
+    //***************************************** wrap up in setupview
     [self setUpSuggestionView];
     [self addShadowToView:_autocompleteView];
     [self addShadowToView:self.containerView];
-    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height, 300, 80)];
-    self.buttonView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.buttonView];
-    [self addShadowToView:self.buttonView];
-    self.buttonView.layer.opacity = 0.85;
-    
     self.view.layer.shadowOpacity = 0.75f;
     self.view.layer.shadowRadius = 10.0f;
     self.view.layer.shadowColor = [UIColor blackColor].CGColor;
+    //******************************************************************
     
     if(![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]){
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
-
-    [self performSelector:@selector(popupButtonView:) withObject:self.buttonView afterDelay:2];
+    
+    //[self performSelector:@selector(popupButtonView:) withObject:self.buttonView afterDelay:2];
     
 }
-
+- (void)setUpButtonView{
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 100, 300, 80)];
+    self.buttonView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.buttonView];
+    [self addShadowToView:self.buttonView];
+    self.buttonView.layer.opacity = 0.85;
+    
+}
 - (void)popupButtonView:(UIView *)view{
     [UIView animateWithDuration:0.7 animations:^{
         view.center = CGPointMake(view.center.x, view.center.y - 100);
@@ -83,7 +87,7 @@
     view.layer.shadowColor = [UIColor blackColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
     view.layer.shadowOpacity = 0.5f;
-
+    
 }
 
 -(void)setUpSuggestionView{
@@ -183,16 +187,45 @@
 }
 
 
-
-
-- (IBAction)GoButtonPressed:(id)sender {
-    NSString *cityName = [[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"," withString:@" "] stringByReplacingOccurrencesOfString:@"  " withString:@" "] stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+- (void)setUpButtons{
+    for (UIView *view in [self.buttonView subviews]){
+        [view removeFromSuperview];
+    }
+    NSArray *names = [self.formattedCityName componentsSeparatedByString:@", "];
+    int nextX = 20;
+    for(NSString *name in names){
+        
+        NSLog(@"add button!!! : %@", name);
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(nextX, 20, 80, 40)];
+        nextX += 100;
+        [button setTitle:name forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.buttonView addSubview:button];
+        [button addTarget:self action:@selector(locationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+- (IBAction)locationButtonPressed:(id)sender {
+    
+    UIButton *button = (UIButton *)sender;
+    needResetButtons = false;
+    NSString *cityName = button.titleLabel.text;
     self.formattedCityName = cityName;
     [self.InputTextField resignFirstResponder];
     [self getCityGeoInfo];
     
 }
 
+- (IBAction)GoButtonPressed:(id)sender {
+    needResetButtons = true;
+    [self.buttonView removeFromSuperview];
+    [self setUpButtonView];
+    NSString *cityName = [[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"," withString:@" "] stringByReplacingOccurrencesOfString:@"  " withString:@" "] stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+    self.formattedCityName = cityName;
+    [self.InputTextField resignFirstResponder];
+    [self getCityGeoInfo];
+    
+    
+}
 
 
 
@@ -206,6 +239,7 @@
         for (NSDictionary *place in result){
             self.formattedCityName = (NSString *)place[@"formatted_address"];
             self.locationInfo = [self parseGeoInfo:place];
+            if(needResetButtons) [self setUpButtons];
             [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
         }
         
