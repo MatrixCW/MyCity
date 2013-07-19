@@ -36,7 +36,7 @@
     [self setUpSuggestionView];
     [self addShadowToView:_autocompleteView];
     [self addShadowToView:self.InputTextField];
-    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, 490, 300, 80)];
+    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height, 300, 80)];
     buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:buttonView];
     [self addShadowToView:buttonView];
