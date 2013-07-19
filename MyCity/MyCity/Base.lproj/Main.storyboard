@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="619" y="-1282"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Preview Controller-->
         <scene sceneID="7kb-Az-Kbi">
             <objects>
-                <viewController id="K6h-Qj-V0g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapPreview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K6h-Qj-V0g" customClass="MapPreviewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zDg-0H-bfa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,6 +189,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="MenuButtonPressed:" destination="K6h-Qj-V0g" eventType="touchUpInside" id="to6-ec-0nB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

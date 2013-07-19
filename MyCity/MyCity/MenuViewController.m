@@ -29,9 +29,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    UIEdgeInsets inset = UIEdgeInsetsMake(50, 0, 0, 0);
+    self.tableView.contentInset = inset;
+    
+    self.allGeoLocationCoordinates = [NSArray arrayWithObjects:@"111,111",@"222,222",@"333.333", nil];
+    
     [self.slidingViewController setAnchorRightRevealAmount:250.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
-    self.allGeoLocationCoordinates = [MCGeoInfoTableViewMessenger outputData];
+    //self.allGeoLocationCoordinates = [MCGeoInfoTableViewMessenger outputData];
     
 }
 
@@ -47,24 +52,59 @@
 {
 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
     // Return the number of rows in the section.
-    return 0;
+    NSLog(@"%i",self.allGeoLocationCoordinates.count);
+    return self.allGeoLocationCoordinates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    NSString *cellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    }
     
-    // Configure the cell...
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.allGeoLocationCoordinates objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    
+    return @"Added Coordinates";
+    
+}
+
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    UIViewController *newTopViewController;
+    
+    
+    NSString *identifier = @"MapPreview";
+        
+    newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+        
+        
+        
+    
+    [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
+        CGRect frame = self.slidingViewController.topViewController.view.frame;
+        self.slidingViewController.topViewController = newTopViewController;
+        self.slidingViewController.topViewController.view.frame = frame;
+        [self.slidingViewController resetTopView];
+    }];
+    
 }
 
 /*
