@@ -34,7 +34,13 @@
     self.remainingSlots = 3;
     
     [self setUpSuggestionView];
-    [self addShadowToView];
+    [self addShadowToView:_autocompleteView];
+    [self addShadowToView:self.containerView];
+    UIView *buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, 490, 300, 80)];
+    buttonView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:buttonView];
+    [self addShadowToView:buttonView];
+    buttonView.layer.opacity = 0.85;
     
     self.view.layer.shadowOpacity = 0.75f;
     self.view.layer.shadowRadius = 10.0f;
@@ -45,9 +51,22 @@
     }
     
 
+    [self performSelector:@selector(popupButtonView:) withObject:buttonView afterDelay:2];
     
 }
 
+- (void)popupButtonView:(UIView *)view{
+    [UIView animateWithDuration:0.7 animations:^{
+        view.center = CGPointMake(view.center.x, view.center.y - 100);
+    }];
+}
+
+- (void)hideButtonView:(UIView *)view{
+    [UIView animateWithDuration:0.7 animations:^{
+        view.center = CGPointMake(view.center.x, view.center.y + 100);
+    }];
+    
+}
 - (IBAction)SlidingButtonPressed:(id)sender {
     
     [self.slidingViewController anchorTopViewTo:ECRight];
@@ -59,16 +78,12 @@
 
 
 //add shadow to inputfield and autocompleteView.
-- (void)addShadowToView{
-    self.containerView.layer.masksToBounds = NO;
-    self.containerView.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.containerView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    self.containerView.layer.shadowOpacity = 0.5f;
-    
-    _autocompleteView.layer.masksToBounds = NO;
-    _autocompleteView.layer.shadowColor = [UIColor blackColor].CGColor;
-    _autocompleteView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    _autocompleteView.layer.shadowOpacity = 0.5f;
+- (void)addShadowToView:(UIView *)view{
+    view.layer.masksToBounds = NO;
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    view.layer.shadowOpacity = 0.5f;
+
 }
 
 -(void)setUpSuggestionView{
