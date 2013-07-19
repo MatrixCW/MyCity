@@ -60,10 +60,11 @@
 
 //add shadow to inputfield and autocompleteView.
 - (void)addShadowToView{
-    self.InputTextField.layer.masksToBounds = NO;
-    self.InputTextField.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.InputTextField.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    self.InputTextField.layer.shadowOpacity = 0.5f;
+    self.containerView.layer.masksToBounds = NO;
+    self.containerView.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.containerView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    self.containerView.layer.shadowOpacity = 0.5f;
+    
     _autocompleteView.layer.masksToBounds = NO;
     _autocompleteView.layer.shadowColor = [UIColor blackColor].CGColor;
     _autocompleteView.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
