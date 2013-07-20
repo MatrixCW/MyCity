@@ -13,8 +13,8 @@
 #import "TRGoogleMapsAutocompletionCellFactory.h"
 #import "AFJSONRequestOperation.h"
 #import "ECSlidingViewController.h"
-#import "MenuViewController.h"
-#import "MCGeoInfoTableViewMessenger.h"
+#import "MCMenuViewController.h"
+#import "TRStringExtensions.h"
 
 @implementation MCGeoLocationViewController{
     
@@ -43,12 +43,13 @@
     self.view.layer.shadowColor = [UIColor blackColor].CGColor;
     //******************************************************************
     
-    if(![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]){
+    if(![self.slidingViewController.underLeftViewController isKindOfClass:[MCMenuViewController class]]){
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
     
     //[self performSelector:@selector(popupButtonView:) withObject:self.buttonView afterDelay:2];
+    
     
 }
 - (void)setUpButtonView{
@@ -73,8 +74,19 @@
 }
 - (IBAction)SlidingButtonPressed:(id)sender {
     
-    [self.slidingViewController anchorTopViewTo:ECRight];
+    if(!self.slidingViewController.addedCoordinates){
+        self.slidingViewController.addedCoordinates = [NSMutableArray array];
+    }
+    
+    [self.slidingViewController.addedCoordinates removeAllObjects];
+    
+    for(id addedCoordinates in self.GeoLocationInfo)
+        [self.slidingViewController.addedCoordinates addObject:addedCoordinates];
+    
     [self.InputTextField resignFirstResponder];
+    
+    
+    [self.slidingViewController anchorTopViewTo:ECRight];
     
 }
 
@@ -104,7 +116,6 @@
 -(void)addNewCoordinate{
     
     [self.GeoLocationInfo addObject:[self getCurrentMapViewInfo]];
-    [MCGeoInfoTableViewMessenger inputData:self.GeoLocationInfo];
     
 }
 
@@ -124,7 +135,7 @@
     
     
     
-    UILabel *newGeoInfoAddedPrompt = [[UILabel alloc] initWithFrame:CGRectMake(73.0, 0.0, 179, 32)];
+    UILabel *newGeoInfoAddedPrompt = [[UILabel alloc] initWithFrame:CGRectMake(73.0, 200.0, 179, 32)];
     newGeoInfoAddedPrompt.textAlignment = NSTextAlignmentCenter;
     newGeoInfoAddedPrompt.textColor = [UIColor redColor];
     newGeoInfoAddedPrompt.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(13.0)];
@@ -195,7 +206,6 @@
     int nextX = 20;
     for(NSString *name in names){
         
-        NSLog(@"add button!!! : %@", name);
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(nextX, 20, 80, 40)];
         nextX += 100;
         [button setTitle:name forState:UIControlStateNormal];
@@ -221,6 +231,7 @@
     [self setUpButtonView];
     NSString *cityName = [[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"," withString:@" "] stringByReplacingOccurrencesOfString:@"  " withString:@" "] stringByReplacingOccurrencesOfString:@" " withString:@",+"];
     self.formattedCityName = cityName;
+    NSLog(@"%@", cityName);
     [self.InputTextField resignFirstResponder];
     [self getCityGeoInfo];
     
@@ -230,13 +241,14 @@
 
 
 - (void)getCityGeoInfo{
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.formattedCityName]];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.formattedCityName urlEncode]]];
     NSLog(@"url: %@",url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
-        for (NSDictionary *place in result){
+        for (NSDictionary *place in [result reverseObjectEnumerator]){
+            NSLog(@"%@", place);
             self.formattedCityName = (NSString *)place[@"formatted_address"];
             self.locationInfo = [self parseGeoInfo:place];
             if(needResetButtons) [self setUpButtons];

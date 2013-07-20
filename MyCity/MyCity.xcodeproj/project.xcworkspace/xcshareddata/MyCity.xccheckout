@@ -3,48 +3,36 @@
 <plist version="1.0">
 <dict>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>BAE4616F-2A93-4087-A417-4650C2CA78C6</string>
+	<string>15CDFB50-4F46-4DC4-9E77-857C3E02952A</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MyCity</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
-		<string>git://github.com/TarasRoshko/TRAutocompleteView.git</string>
-		<key>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</key>
-		<string>https://github.com/MatrixCW/MyCity.git</string>
+		<key>1237663F-7901-4637-8AC9-D2F3849E8A7A</key>
+		<string>ssh://github.com/MatrixCW/MyCity.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyCity/MyCity.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>2E98D3F1-3889-458F-A97C-B4288014F4CE</key>
-		<string>../../../thirdparty/TRAutocompleteView</string>
-		<key>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</key>
+		<key>1237663F-7901-4637-8AC9-D2F3849E8A7A</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/MatrixCW/MyCity.git</string>
+	<string>ssh://github.com/MatrixCW/MyCity.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</string>
+	<string>1237663F-7901-4637-8AC9-D2F3849E8A7A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FA125C16-C6A4-4BC3-A1C7-D534FD8A0A8D</string>
+			<string>1237663F-7901-4637-8AC9-D2F3849E8A7A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MyCity</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>2E98D3F1-3889-458F-A97C-B4288014F4CE</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TRAutocompleteView</string>
 		</dict>
 	</array>
 </dict>

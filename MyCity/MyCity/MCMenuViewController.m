@@ -1,44 +1,48 @@
 //
-//  MenuViewController.m
+//  MCMenuViewController.m
 //  MyCity
 //
-//  Created by Cui Wei on 18/7/13.
+//  Created by Chen Zeyu on 13-7-20.
 //
 //
 
-#import "MenuViewController.h"
+#import "MCMenuViewController.h"
 #import "ECSlidingViewController.h"
-#import "MCGeoInfoTableViewMessenger.h"
+#import "MCGeoLocationViewController.h"
 
-@interface MenuViewController ()
+@interface MCMenuViewController ()
 
-@property NSArray *allGeoLocationCoordinates;
+@property NSMutableArray *sections;
+@property NSMutableArray *allAddedGeoLocationCoordinates;
 
 @end
 
-@implementation MenuViewController
-
+@implementation MCMenuViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	// Do any additional setup after loading the view.
+    self.sections = [NSMutableArray array];
+    self.allAddedGeoLocationCoordinates = [NSMutableArray array];
     
-    UIEdgeInsets inset = UIEdgeInsetsMake(50, 0, 0, 0);
-    self.tableView.contentInset = inset;
+    [self.allAddedGeoLocationCoordinates addObject:@"haha"];
+    [self.allAddedGeoLocationCoordinates addObject:@"hehe"];
+    [self.allAddedGeoLocationCoordinates addObject:@"hihi"];
     
-    self.allGeoLocationCoordinates = [NSArray arrayWithObjects:@"111,111",@"222,222",@"333.333", nil];
+    [self.sections addObject:@"go back"];
+    [self.sections addObject:self.allAddedGeoLocationCoordinates];
     
     [self.slidingViewController setAnchorRightRevealAmount:250.0f];
     self.slidingViewController.underLeftWidthLayout = ECFullWidth;
-    //self.allGeoLocationCoordinates = [MCGeoInfoTableViewMessenger outputData];
+    
+    self.MyTableView.delegate = self;
+    self.MyTableView.dataSource = self;
+    
+
     
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,15 +56,19 @@
 {
 
     // Return the number of sections.
-    return 1;
+    return self.sections.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
     // Return the number of rows in the section.
-    NSLog(@"%i",self.allGeoLocationCoordinates.count);
-    return self.allGeoLocationCoordinates.count;
+   if(section == 0)
+    return 1;
+   if(section == 1)
+        return self.allAddedGeoLocationCoordinates.count;
+    
+    return 123;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,13 +79,18 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.allGeoLocationCoordinates objectAtIndex:indexPath.row]];
+    if(indexPath.section == 0)
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.sections objectAtIndex:0]];
+    else
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.allAddedGeoLocationCoordinates objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
+    if(section == 0)
+        return @"System config";
     
     return @"Added Coordinates";
     
@@ -89,14 +102,16 @@
     
     
     UIViewController *newTopViewController;
+    NSString *identifier;
     
-    
-    NSString *identifier = @"MapPreview";
+    if(indexPath.section == 1){
+      identifier = @"MapPreview";
+      newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    }
+    else{
+        newTopViewController = self.slidingViewController.mainViewController;
         
-    newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
-        
-        
-        
+    }
     
     [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
         CGRect frame = self.slidingViewController.topViewController.view.frame;
@@ -107,6 +122,28 @@
     
 }
 
+// Override to support conditional editing of the table view.
+// This only needs to be implemented if you are going to be returning NO
+// for some items. By default, all items are editable.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    if(indexPath.section == 1)
+        return YES;
+    return NO;
+}
+
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        
+        [self.allAddedGeoLocationCoordinates removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -157,5 +194,4 @@
 }
 
  */
-
 @end

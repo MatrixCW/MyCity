@@ -67,10 +67,20 @@ typedef enum {
   BOOL topViewHasFocus;
 }
 
+
+@property (nonatomic) int selectedCoordinates;
+@property (nonatomic,strong) NSMutableArray *addedCoordinates;
+
+/*
+ returns the view controller that is in controller of other smaller viewcontrollers. This view controller is typically the one that is shown at first.
+ */
+@property (nonatomic, strong) UIViewController *mainViewController;
+
 /** Returns the view controller that will be visible when the top view is slide to the right.
  
  This view controller is typically a menu or top-level view that switches out the top view controller.
  */
+
 @property (nonatomic, strong) UIViewController *underLeftViewController;
 
 /** Returns the view controller that will be visible when the top view is slide to the left.

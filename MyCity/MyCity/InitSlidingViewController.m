@@ -29,6 +29,7 @@
 	// Do any additional setup after loading the view.
     
     self.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainGeoLocationVC"];
+    self.mainViewController = self.topViewController;
 }
 
 - (void)didReceiveMemoryWarning

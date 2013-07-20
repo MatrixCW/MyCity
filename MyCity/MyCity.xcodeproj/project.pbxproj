@@ -10,6 +10,7 @@
 		4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */; };
 		4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */; };
 		4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */; };
+		4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B58F414179A9BDB001A3334 /* MCMenuViewController.m */; };
 		4BA338EE179809B200A660A3 /* TRAutocompleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E2179809B200A660A3 /* TRAutocompleteView.m */; };
 		4BA338EF179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E5179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
 		4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E7179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m */; };
@@ -62,9 +63,7 @@
 		C9C74C1A17952CF5007AAFE2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74C1917952CF5007AAFE2 /* SystemConfiguration.framework */; };
 		C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8BB17983421005B8B4E /* ECSlidingViewController.m */; };
 		C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */; };
-		C9CAD8C4179834E3005B8B4E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C3179834E3005B8B4E /* MenuViewController.m */; };
 		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
-		C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */; };
 		C9CBED0717990CBE006751D1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CBED0617990CBE006751D1 /* button.png */; };
 		C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CBED0917990E62006751D1 /* MapPreviewController.m */; };
 /* End PBXBuildFile section */
@@ -86,6 +85,8 @@
 		4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDemographicViewController.m; sourceTree = "<group>"; };
 		4B4EBFD31796D2B800BE0DA9 /* XYPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPieChart.h; sourceTree = "<group>"; };
 		4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPieChart.m; sourceTree = "<group>"; };
+		4B58F413179A9BDB001A3334 /* MCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCMenuViewController.h; sourceTree = "<group>"; };
+		4B58F414179A9BDB001A3334 /* MCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCMenuViewController.m; sourceTree = "<group>"; };
 		4BA338E0179809B200A660A3 /* TRAutocompleteItemsSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteItemsSource.h; sourceTree = "<group>"; };
 		4BA338E1179809B200A660A3 /* TRAutocompleteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAutocompleteView.h; sourceTree = "<group>"; };
 		4BA338E2179809B200A660A3 /* TRAutocompleteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAutocompleteView.m; sourceTree = "<group>"; };
@@ -169,10 +170,6 @@
 		C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageWithUIView.m"; sourceTree = "<group>"; };
 		C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitSlidingViewController.h; sourceTree = "<group>"; };
 		C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitSlidingViewController.m; sourceTree = "<group>"; };
-		C9CAD8C2179834E3005B8B4E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		C9CAD8C3179834E3005B8B4E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTableViewMessenger.h; sourceTree = "<group>"; };
-		C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoInfoTableViewMessenger.m; sourceTree = "<group>"; };
 		C9CBED0617990CBE006751D1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		C9CBED0817990E62006751D1 /* MapPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPreviewController.h; sourceTree = "<group>"; };
 		C9CBED0917990E62006751D1 /* MapPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPreviewController.m; sourceTree = "<group>"; };
@@ -340,16 +337,14 @@
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
+				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
+				4B58F414179A9BDB001A3334 /* MCMenuViewController.m */,
 				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
 				C9CBED0917990E62006751D1 /* MapPreviewController.m */,
 				C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */,
 				C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */,
-				C9CAD8C2179834E3005B8B4E /* MenuViewController.h */,
-				C9CAD8C3179834E3005B8B4E /* MenuViewController.m */,
 				C9C74BDF17952687007AAFE2 /* MCViewController.h */,
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
-				C9CAD8CA17983F10005B8B4E /* MCGeoInfoTableViewMessenger.h */,
-				C9CAD8CB17983F10005B8B4E /* MCGeoInfoTableViewMessenger.m */,
 				C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */,
 				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
 				C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */,
@@ -508,7 +503,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9CAD8CC17983F77005B8B4E /* MCGeoInfoTableViewMessenger.m in Sources */,
 				C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */,
 				4BA3390A179809E500A660A3 /* AFImageRequestOperation.m in Sources */,
 				4BA33909179809E500A660A3 /* AFHTTPRequestOperation.m in Sources */,
@@ -521,7 +515,6 @@
 				4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
 				4BA3390D179809E500A660A3 /* AFPropertyListRequestOperation.m in Sources */,
 				C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */,
-				C9CAD8C4179834E3005B8B4E /* MenuViewController.m in Sources */,
 				4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */,
 				4BA338F1179809B200A660A3 /* TRGoogleMapsSuggestion.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
@@ -529,6 +522,7 @@
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
+				4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */,
 				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BA33908179809E500A660A3 /* AFHTTPClient.m in Sources */,

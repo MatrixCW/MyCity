@@ -8,7 +8,7 @@
 
 #import "MapPreviewController.h"
 #import "ECSlidingViewController.h"
-#import "MenuViewController.h"
+#import "MCMenuViewController.h"
 
 @interface MapPreviewController ()
 
@@ -34,7 +34,7 @@
     self.view.layer.shadowRadius = 10.0f;
     self.view.layer.shadowColor = [UIColor blackColor].CGColor;
     
-    if(![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]){
+    if(![self.slidingViewController.underLeftViewController isKindOfClass:[MCMenuViewController class]]){
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
