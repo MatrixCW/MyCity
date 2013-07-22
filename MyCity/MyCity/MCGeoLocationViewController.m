@@ -53,7 +53,7 @@
     
 }
 - (void)setUpButtonView{
-    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 200, 300, 80)];
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 200, 200, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
     [self addShadowToView:self.buttonView];
@@ -72,6 +72,7 @@
     }];
     
 }
+
 - (IBAction)SlidingButtonPressed:(id)sender {
     
     if(!self.slidingViewController.addedCoordinates){
@@ -215,6 +216,7 @@
         [button addTarget:self action:@selector(locationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
      */
+
     
     for(UIView *view in self.buttonView.subviews){
         [view removeFromSuperview];
@@ -227,7 +229,7 @@
         NSLog(@"dddfffdfdf %@",(NSString*)object);
     }
     
-    UIPickerView *pickRegion = [[UIPickerView alloc] initWithFrame:CGRectMake(0, -50, 300, 80)];
+    UIPickerView *pickRegion = [[UIPickerView alloc] initWithFrame:CGRectMake(25, -40, 150, 80)];
     pickRegion.dataSource = self;
     pickRegion.delegate = self;
     [self.buttonView addSubview:pickRegion];
@@ -259,7 +261,12 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     //Let's print in the console what the user had chosen;
-    NSLog(@"Chosen item: %@", [self.formattedCityNameArray objectAtIndex:row]);
+    
+    needResetButtons = false;
+    NSString *cityName = [self.formattedCityNameArray objectAtIndex:row];
+    self.formattedCityName = cityName;
+    [self.InputTextField resignFirstResponder];
+    [self getCityGeoInfo];
 }
 
 - (IBAction)locationButtonPressed:(id)sender {
@@ -311,13 +318,19 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
-        for (NSDictionary *place in [result reverseObjectEnumerator]){
+        
+        
+        NSDictionary *place = [result objectAtIndex:0];
             
-            self.formattedCityName = (NSString *)place[@"formatted_address"];
-            self.locationInfo = [self parseGeoInfo:place];
+        self.formattedCityName = (NSString *)place[@"formatted_address"];
+        self.locationInfo = [self parseGeoInfo:place];
+        
+        if(needResetButtons)
+          [self setUpButtons];
             
-            [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
-        }
+        [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
+        
+        
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json){
         NSLog(@"fail to get city info: %@",error.description);
