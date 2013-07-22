@@ -239,6 +239,7 @@
     return 1;
 }
 
+
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return self.formattedCityNameArray.count;
@@ -286,14 +287,19 @@
     needResetButtons = true;
     [self.buttonView removeFromSuperview];
     [self setUpButtonView];
-    NSString *cityName = [[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"," withString:@" "] stringByReplacingOccurrencesOfString:@"  " withString:@" "] stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+    NSString *cityName = [[[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
+        stringByReplacingOccurrencesOfString:@"," withString:@" "]
+        stringByReplacingOccurrencesOfString:@"  " withString:@" "]
+        stringByReplacingOccurrencesOfString:@" " withString:@",+"];
     self.formattedCityName = cityName;
     NSLog(@"%@", cityName);
     [self.InputTextField resignFirstResponder];
     
     if(_autocompleteView.suggestions.count != 0){
         [self getCityGeoInfo];
-    } else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
+    } 
+    
+    else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
     
 }
 
@@ -301,16 +307,15 @@
 
 - (void)getCityGeoInfo{
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.formattedCityName urlEncode]]];
-    NSLog(@"url: %@",url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
         for (NSDictionary *place in [result reverseObjectEnumerator]){
-            NSLog(@"%@", place);
+            
             self.formattedCityName = (NSString *)place[@"formatted_address"];
             self.locationInfo = [self parseGeoInfo:place];
-            if(needResetButtons) [self setUpButtons];
+            
             [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
         }
         

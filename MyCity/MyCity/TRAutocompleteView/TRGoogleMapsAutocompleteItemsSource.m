@@ -92,9 +92,13 @@
          
          for (NSDictionary *place in predictions)
          {
-             if([MCGoogleResultParser isACity:place]){
-                 TRGoogleMapsSuggestion
-                 *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"formatted_address"]];
+             TRGoogleMapsSuggestion *suggestion;
+             if([MCGoogleResultParser isACity:place] || [MCGoogleResultParser isACountry:place]){
+                 if([MCGoogleResultParser isACountry:place]){
+                     
+                     suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[NSString stringWithFormat:@"%@          (A Country)" ,[place objectForKey:@"formatted_address"]]];
+                 } else
+                     suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"formatted_address"]];
                  [suggestions addObject:suggestion];
              }
          }

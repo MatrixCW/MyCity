@@ -10,5 +10,6 @@
 
 @interface MCGoogleResultParser : NSObject
 + (BOOL) isACity:(NSDictionary *)place;
++ (BOOL) isACountry:(NSDictionary *)place;
 
 @end
