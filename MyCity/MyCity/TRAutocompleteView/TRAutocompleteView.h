@@ -28,7 +28,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "MCGeoLocationViewController.h"
 @protocol TRAutocompleteItemsSource;
 @protocol TRAutocompletionCellFactory;
 @protocol TRSuggestionItem;
@@ -37,7 +37,7 @@
 
 @property(readonly) id <TRSuggestionItem> selectedSuggestion;
 @property(readonly) NSArray *suggestions;
-
+@property id<AutoCompleteDelegate> geoDelegate;
 @property(copy) void (^didAutocompleteWith)(id <TRSuggestionItem>);
 
 @property(nonatomic) UIColor *separatorColor;
