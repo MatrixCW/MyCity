@@ -28,7 +28,6 @@
 		4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */; };
 		4BC648BF179D259800B85D70 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E5179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
 		4BC648C3179D388700B85D70 /* MCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648C2179D388700B85D70 /* MCWebViewController.m */; };
-		4BC648C5179D3CE100B85D70 /* cool.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BC648C4179D3CE100B85D70 /* cool.txt */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -46,6 +45,7 @@
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
 		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
 		C90DCAC6179D336B0037A3C1 /* MCRandomLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */; };
+		C90DCACE179D481D0037A3C1 /* cool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cool.txt */; };
 		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
@@ -128,7 +128,6 @@
 		4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCGoogleResultParser.m; sourceTree = "<group>"; };
 		4BC648C1179D388700B85D70 /* MCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWebViewController.h; sourceTree = "<group>"; };
 		4BC648C2179D388700B85D70 /* MCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWebViewController.m; sourceTree = "<group>"; };
-		4BC648C4179D3CE100B85D70 /* cool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cool.txt; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -149,6 +148,7 @@
 		4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEnterCityViewController.m; sourceTree = "<group>"; };
 		C90DCAC4179D336B0037A3C1 /* MCRandomLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRandomLocationViewController.h; sourceTree = "<group>"; };
 		C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRandomLocationViewController.m; sourceTree = "<group>"; };
+		C90DCACD179D481D0037A3C1 /* cool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cool.txt; sourceTree = "<group>"; };
 		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
 		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTetrad.h; sourceTree = "<group>"; };
@@ -383,7 +383,7 @@
 		C9C74BD117952687007AAFE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4BC648C4179D3CE100B85D70 /* cool.txt */,
+				C90DCACD179D481D0037A3C1 /* cool.txt */,
 				C9C74BD217952687007AAFE2 /* MyCity-Info.plist */,
 				C9C74BD317952687007AAFE2 /* InfoPlist.strings */,
 				C9C74BD617952687007AAFE2 /* main.m */,
@@ -499,7 +499,7 @@
 			files = (
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9CBED0717990CBE006751D1 /* button.png in Resources */,
-				4BC648C5179D3CE100B85D70 /* cool.txt in Resources */,
+				C90DCACE179D481D0037A3C1 /* cool.txt in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
 				C9C74BDE17952687007AAFE2 /* Main.storyboard in Resources */,
