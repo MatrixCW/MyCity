@@ -10,11 +10,15 @@
 #import <MapKit/MapKit.h>
 
 #define SEGUETONEXT @"GeoLocationToIconicPlace"
+@protocol AutoCompleteDelegate
+- (void)suggestionPressed;
+@end
 
-@interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>
+@interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate, AutoCompleteDelegate>
 
 - (IBAction)GoButtonPressed:(id)sender;
 - (IBAction)SlidingButtonPressed:(id)sender;
+
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property UIView *buttonView;

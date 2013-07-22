@@ -30,7 +30,6 @@
 #import "TRAutocompleteView.h"
 #import "TRAutocompleteItemsSource.h"
 #import "TRAutocompletionCellFactory.h"
-
 @interface TRAutocompleteView () <UITableViewDelegate, UITableViewDataSource>
 
 @property(readwrite) id <TRSuggestionItem> selectedSuggestion;
@@ -224,6 +223,8 @@
 
     if (self.didAutocompleteWith)
         self.didAutocompleteWith(self.selectedSuggestion);
+    
+    [self.geoDelegate suggestionPressed];
 }
 
 - (void)dealloc

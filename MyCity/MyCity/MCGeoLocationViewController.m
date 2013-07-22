@@ -108,6 +108,7 @@
                                                          usingSource:[[TRGoogleMapsAutocompleteItemsSource alloc] initWithMinimumCharactersToTrigger:2 apiKey:@"INSERT_YOUR_PLACES_API_KEY_HERE"]
                                                          cellFactory:[[TRGoogleMapsAutocompletionCellFactory alloc] initWithCellForegroundColor:[UIColor lightGrayColor] fontSize:14]
                                                         presentingIn:self];
+    _autocompleteView.geoDelegate = self;
 }
 
 
@@ -367,4 +368,8 @@
     return NO;
 }
 
+- (void)suggestionPressed{
+    
+    [self GoButtonPressed:nil];
+}
 @end
