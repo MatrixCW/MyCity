@@ -44,4 +44,17 @@
 }
 
 
+-(MKCoordinateRegion)specifiedRegion{
+    
+    MKCoordinateRegion myRegion;
+    myRegion.center.latitude = self.latitude;
+    myRegion.center.longitude = self.longitude;
+    myRegion.span.latitudeDelta = self.latitudeDelta;
+    myRegion.span.longitudeDelta = self.longitudeDelta;
+    
+    return myRegion;
+    
+}
+
+
 @end
