@@ -14,7 +14,7 @@
 - (void)suggestionPressed;
 @end
 
-@interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate, AutoCompleteDelegate>
+@interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate, AutoCompleteDelegate>
 
 - (IBAction)GoButtonPressed:(id)sender;
 - (IBAction)SlidingButtonPressed:(id)sender;
@@ -28,7 +28,10 @@
 
 @property NSMutableArray *GeoLocationInfo;
 @property NSString *currentCityName;
+
 @property NSString *formattedCityName;
+@property NSArray *formattedCityNameArray;
+
 @property int remainingSlots;
 @property NSArray *locationInfo;
 @property NSArray *geoCodeInfo;

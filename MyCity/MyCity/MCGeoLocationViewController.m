@@ -53,7 +53,7 @@
     
 }
 - (void)setUpButtonView{
-    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 100, 300, 80)];
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 200, 300, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
     [self addShadowToView:self.buttonView];
@@ -200,6 +200,7 @@
 
 
 - (void)setUpButtons{
+    /*
     for (UIView *view in [self.buttonView subviews]){
         [view removeFromSuperview];
     }
@@ -214,6 +215,52 @@
         [self.buttonView addSubview:button];
         [button addTarget:self action:@selector(locationButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
+     */
+    
+    for(UIView *view in self.buttonView.subviews){
+        [view removeFromSuperview];
+    }
+    
+    self.formattedCityNameArray = [self.formattedCityName componentsSeparatedByString:@", "];
+    
+    
+    for(id object in self.formattedCityNameArray){
+        NSLog(@"dddfffdfdf %@",(NSString*)object);
+    }
+    
+    UIPickerView *pickRegion = [[UIPickerView alloc] initWithFrame:CGRectMake(0, -50, 300, 80)];
+    pickRegion.dataSource = self;
+    pickRegion.delegate = self;
+    [self.buttonView addSubview:pickRegion];
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return self.formattedCityNameArray.count;
+}
+
+- (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
+{
+    return 30.0;
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    return [self.formattedCityNameArray objectAtIndex:row];
+}
+
+//If the user chooses from the pickerview, it calls this function;
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    //Let's print in the console what the user had chosen;
+    NSLog(@"Chosen item: %@", [self.formattedCityNameArray objectAtIndex:row]);
 }
 
 - (IBAction)locationButtonPressed:(id)sender {
