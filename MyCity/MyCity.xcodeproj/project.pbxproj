@@ -27,6 +27,8 @@
 		4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33907179809E500A660A3 /* UIImageView+AFNetworking.m */; };
 		4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */; };
 		4BC648BF179D259800B85D70 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E5179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
+		4BC648C3179D388700B85D70 /* MCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648C2179D388700B85D70 /* MCWebViewController.m */; };
+		4BC648C5179D3CE100B85D70 /* cool.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4BC648C4179D3CE100B85D70 /* cool.txt */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -124,6 +126,9 @@
 		4BA33907179809E500A660A3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGoogleResultParser.h; sourceTree = "<group>"; };
 		4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCGoogleResultParser.m; sourceTree = "<group>"; };
+		4BC648C1179D388700B85D70 /* MCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCWebViewController.h; sourceTree = "<group>"; };
+		4BC648C2179D388700B85D70 /* MCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCWebViewController.m; sourceTree = "<group>"; };
+		4BC648C4179D3CE100B85D70 /* cool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cool.txt; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -347,6 +352,8 @@
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
 				C90DCAC4179D336B0037A3C1 /* MCRandomLocationViewController.h */,
 				C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */,
+				4BC648C1179D388700B85D70 /* MCWebViewController.h */,
+				4BC648C2179D388700B85D70 /* MCWebViewController.m */,
 				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
 				4B58F414179A9BDB001A3334 /* MCMenuViewController.m */,
 				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
@@ -376,6 +383,7 @@
 		C9C74BD117952687007AAFE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4BC648C4179D3CE100B85D70 /* cool.txt */,
 				C9C74BD217952687007AAFE2 /* MyCity-Info.plist */,
 				C9C74BD317952687007AAFE2 /* InfoPlist.strings */,
 				C9C74BD617952687007AAFE2 /* main.m */,
@@ -491,6 +499,7 @@
 			files = (
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9CBED0717990CBE006751D1 /* button.png in Resources */,
+				4BC648C5179D3CE100B85D70 /* cool.txt in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
 				C9C74BDE17952687007AAFE2 /* Main.storyboard in Resources */,
@@ -534,6 +543,7 @@
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
 				4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */,
+				4BC648C3179D388700B85D70 /* MCWebViewController.m in Sources */,
 				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */,

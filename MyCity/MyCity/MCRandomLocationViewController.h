@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MapKit.h>
 @interface MCRandomLocationViewController : UIViewController
-
+@property NSString *cityName;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end

@@ -60,6 +60,7 @@
     self.buttonView.layer.opacity = 0.85;
     
 }
+
 - (void)popupButtonView:(UIView *)view{
     [UIView animateWithDuration:0.7 animations:^{
         view.center = CGPointMake(view.center.x, view.center.y - 100);
