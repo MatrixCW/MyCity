@@ -31,13 +31,13 @@
 #import "AFJSONRequestOperation.h"
 #import "TRStringExtensions.h"
 #import "TRGoogleMapsSuggestion.h"
-
+#import "MCGoogleResultParser.h"
 @implementation TRGoogleMapsAutocompleteItemsSource
 {
     NSString *_apiKey;
-
+    
     NSUInteger _minimumCharactersToTrigger;
-
+    
     BOOL _requestToReload;
     BOOL _loading;
 }
@@ -50,11 +50,11 @@
     {
         _minimumCharactersToTrigger = minimumCharactersToTrigger;
         _apiKey = apiKey;
-
+        
         self.location = kCLLocationCoordinate2DInvalid;
         self.radiusMeters = -1;
     }
-
+    
     return self;
 }
 
@@ -72,7 +72,7 @@
             _requestToReload = YES;
             return;
         }
-
+        
         _loading = YES;
         [self requestSuggestionsFor:query whenReady:suggestionsReady];
     }
@@ -82,52 +82,54 @@
 {
     NSString *urlString = [self autocompleteUrlFor:query];
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-
+    
     AFJSONRequestOperation *operation =
-            [AFJSONRequestOperation JSONRequestOperationWithRequest:urlRequest
-                                                            success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-                                                            {
-                                                                NSMutableArray *suggestions = [[NSMutableArray alloc] init];
-                                                                NSArray *predictions = [JSON objectForKey:@"results"];
-
-                                                                for (NSDictionary *place in predictions)
-                                                                {
-                                                                    TRGoogleMapsSuggestion
-                                                                            *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"formatted_address"]];
-                                                                    [suggestions addObject:suggestion];
-                                                                }
-
-                                                                if (suggestionsReady)
-                                                                    suggestionsReady(suggestions);
-
-                                                                @synchronized (self)
-                                                                {
-                                                                    _loading = NO;
-
-                                                                    if (_requestToReload)
-                                                                    {
-                                                                        _requestToReload = NO;
-                                                                        [self itemsFor:query whenReady:suggestionsReady];
-                                                                    }
-                                                                }
-                                                            }
-                                                            failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json)
-                                                            {
-                                                                NSLog(@"Error while loading suggestions: %@", error);
-                                                                @synchronized (self)
-                                                                {
-                                                                    _loading = NO;
-                                                                }
-                                                            }];
-
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:urlRequest
+                                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+     {
+         NSMutableArray *suggestions = [[NSMutableArray alloc] init];
+         NSArray *predictions = [JSON objectForKey:@"results"];
+         
+         for (NSDictionary *place in predictions)
+         {
+             if([MCGoogleResultParser isACity:place]){
+                 TRGoogleMapsSuggestion
+                 *suggestion = [[TRGoogleMapsSuggestion alloc] initWith:[place objectForKey:@"formatted_address"]];
+                 [suggestions addObject:suggestion];
+             }
+         }
+         
+         if (suggestionsReady)
+             suggestionsReady(suggestions);
+         
+         @synchronized (self)
+         {
+             _loading = NO;
+             
+             if (_requestToReload)
+             {
+                 _requestToReload = NO;
+                 [self itemsFor:query whenReady:suggestionsReady];
+             }
+         }
+     }
+                                                    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json)
+     {
+         NSLog(@"Error while loading suggestions: %@", error);
+         @synchronized (self)
+         {
+             _loading = NO;
+         }
+     }];
+    
     [operation start];
 }
 
 - (NSString*) autocompleteUrlFor:(NSString*)query
 {
     NSMutableString *urlString = [NSMutableString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false",
-                                                  [query urlEncode]];
-
+                                  [query urlEncode]];
+    
     if (CLLocationCoordinate2DIsValid(self.location))
     {
         [urlString appendFormat:@"&sensor=%@", @"true"];
@@ -137,7 +139,7 @@
     }
     else
         [urlString appendFormat:@"&sensor=%@", @"false"];
-
+    
     return urlString;
 }
 

@@ -225,7 +225,17 @@
     
 }
 
+- (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)content{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:content
+                                                   delegate:Nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 - (IBAction)GoButtonPressed:(id)sender {
+    
     needResetButtons = true;
     [self.buttonView removeFromSuperview];
     [self setUpButtonView];
@@ -233,8 +243,10 @@
     self.formattedCityName = cityName;
     NSLog(@"%@", cityName);
     [self.InputTextField resignFirstResponder];
-    [self getCityGeoInfo];
     
+    if(_autocompleteView.suggestions.count != 0){
+        [self getCityGeoInfo];
+    } else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
     
 }
 

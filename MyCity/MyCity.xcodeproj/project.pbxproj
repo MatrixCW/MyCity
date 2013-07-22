@@ -26,6 +26,7 @@
 		4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33903179809E500A660A3 /* AFURLConnectionOperation.m */; };
 		4BA3390F179809E500A660A3 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33905179809E500A660A3 /* AFXMLRequestOperation.m */; };
 		4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33907179809E500A660A3 /* UIImageView+AFNetworking.m */; };
+		4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -120,6 +121,8 @@
 		4BA33905179809E500A660A3 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		4BA33906179809E500A660A3 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		4BA33907179809E500A660A3 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGoogleResultParser.h; sourceTree = "<group>"; };
+		4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCGoogleResultParser.m; sourceTree = "<group>"; };
 		4BFE933217952C2E00C875D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		4BFE933417952C4D00C875D4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4BFE933617952C5400C875D4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -335,6 +338,8 @@
 				4BA338DF179809B200A660A3 /* TRAutocompleteView */,
 				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
+				4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */,
+				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
 				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
@@ -525,6 +530,7 @@
 				4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */,
 				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
+				4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */,
 				4BA33908179809E500A660A3 /* AFHTTPClient.m in Sources */,
 				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
 				C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */,
