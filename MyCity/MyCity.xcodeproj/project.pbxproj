@@ -12,7 +12,6 @@
 		4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B4EBFD41796D2B800BE0DA9 /* XYPieChart.m */; };
 		4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B58F414179A9BDB001A3334 /* MCMenuViewController.m */; };
 		4BA338EE179809B200A660A3 /* TRAutocompleteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E2179809B200A660A3 /* TRAutocompleteView.m */; };
-		4BA338EF179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E5179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
 		4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E7179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m */; };
 		4BA338F1179809B200A660A3 /* TRGoogleMapsSuggestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E9179809B200A660A3 /* TRGoogleMapsSuggestion.m */; };
 		4BA338F2179809B200A660A3 /* TRStringExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338EB179809B200A660A3 /* TRStringExtensions.m */; };
@@ -27,6 +26,7 @@
 		4BA3390F179809E500A660A3 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33905179809E500A660A3 /* AFXMLRequestOperation.m */; };
 		4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA33907179809E500A660A3 /* UIImageView+AFNetworking.m */; };
 		4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */; };
+		4BC648BF179D259800B85D70 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA338E5179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m */; };
 		4BFE933317952C2E00C875D4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933217952C2E00C875D4 /* Parse.framework */; };
 		4BFE933517952C4D00C875D4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933417952C4D00C875D4 /* AudioToolbox.framework */; };
 		4BFE933717952C5400C875D4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE933617952C5400C875D4 /* CFNetwork.framework */; };
@@ -516,6 +516,7 @@
 				4BA3390F179809E500A660A3 /* AFXMLRequestOperation.m in Sources */,
 				4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */,
 				4BA3390C179809E500A660A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				4BC648BF179D259800B85D70 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */,
 				4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
 				4BA3390D179809E500A660A3 /* AFPropertyListRequestOperation.m in Sources */,
@@ -523,7 +524,6 @@
 				4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */,
 				4BA338F1179809B200A660A3 /* TRGoogleMapsSuggestion.m in Sources */,
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
-				4BA338EF179809B200A660A3 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
