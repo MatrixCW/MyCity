@@ -47,7 +47,7 @@
         self.slidingViewController.underLeftViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
     }
     
-    
+    self.InputTextField.delegate = self;
     //[self performSelector:@selector(popupButtonView:) withObject:self.buttonView afterDelay:2];
     
     
@@ -285,6 +285,21 @@
     return [NSArray arrayWithObjects:locationLat, locationLng,northEastLat, northEastLng, southWestLat, southWestLng, nil];
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([self.InputTextField isFirstResponder] && [touch view] != self.InputTextField) {
+        [self.InputTextField resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+}
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self GoButtonPressed:Nil];
+    [textField resignFirstResponder];
+    return NO;
+}
 
 @end

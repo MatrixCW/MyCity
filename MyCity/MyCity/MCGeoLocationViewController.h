@@ -11,7 +11,7 @@
 
 #define SEGUETONEXT @"GeoLocationToIconicPlace"
 
-@interface MCGeoLocationViewController : UIViewController
+@interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate>
 
 - (IBAction)GoButtonPressed:(id)sender;
 - (IBAction)SlidingButtonPressed:(id)sender;
@@ -29,6 +29,7 @@
 @property NSArray *locationInfo;
 @property NSArray *geoCodeInfo;
 @property NSInteger mode;
+
 
 
 

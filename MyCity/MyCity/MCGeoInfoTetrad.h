@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <MapKit/MapKit.h>
 @interface MCGeoInfoTetrad : NSObject
 
 @property (readonly) CGFloat latitude;
@@ -21,5 +21,8 @@
                    andlongitudeDelta:(CGFloat)longitudeDelta;
 
 -(void)showInfo;
+
+
+-(MKCoordinateRegion)specifiedRegion;
 
 @end
