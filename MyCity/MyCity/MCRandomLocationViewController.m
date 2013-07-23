@@ -19,13 +19,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cityName = @"Beijing";
-    //[self setUpAndShowWebView];
+        //[self setUpAndShowWebView];
 	// Do any additional setup after loading the view.
     
         
     [self setUpButtonView];
     [self showRndomLocation:[NSArray arrayWithObjects:@"ChunXilu",@"SiChuan",@"Chengdu",@"China", nil]];
+    [self generateRandomCityName];
 }
 
 
@@ -35,7 +35,7 @@
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:Nil];
     NSArray *lines = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     
-    int randomCityIndex = arc4random();
+    int randomCityIndex = arc4random()%34;
     NSString *currentCity = [lines objectAtIndex:randomCityIndex];
     int start = [currentCity rangeOfString:@" "].location;
     int end = [currentCity rangeOfString:@","].location;
@@ -43,6 +43,7 @@
     range.location = start;
     range.length = end-start;
     self.cityName = [currentCity substringWithRange:range];
+    NSLog(@"generated names: %@", self.cityName);
     
 }
 - (void)backButtonPressed:(id)sender {
