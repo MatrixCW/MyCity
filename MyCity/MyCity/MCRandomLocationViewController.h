@@ -11,4 +11,5 @@
 @interface MCRandomLocationViewController : UIViewController
 @property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property UIView *buttonView;
 @end

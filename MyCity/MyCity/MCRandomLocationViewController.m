@@ -8,6 +8,7 @@
 
 #import "MCRandomLocationViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "MCWebViewController.h"
 @interface MCRandomLocationViewController ()
 
 @end
@@ -46,7 +47,48 @@
          NSLog(@"%@", finalCityName);
          */
     }
+    [self setUpButtonView];
+}
 
+- (IBAction)backButtonPressed:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)addShadowToView:(UIView *)view{
+    view.layer.masksToBounds = NO;
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
+    view.layer.shadowOpacity = 0.5f;
+}
+
+- (void)setUpButtonView{
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.mapView.frame.origin.y + self.mapView.frame.size.height + 200, 300, 80)];
+    self.buttonView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.buttonView];
+    [self addShadowToView:self.buttonView];
+    self.buttonView.layer.opacity = 0.85;
+    SEL back = @selector(backButtonPressed:);
+    SEL openWebView = @selector(openWebView:);
+    [self addButtonToButtonView:@"Learn More" sel:openWebView startX:20];
+    [self addButtonToButtonView:@"Back" sel:back startX:180];
+    [UIView animateWithDuration:1 animations:^{
+        self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 300);
+    }completion:^(BOOL finished){
+        
+    }];
+}
+
+- (void)openWebView:(id)sender{
+    [self performSegueWithIdentifier:@"SegueToWeb" sender:self];
+}
+
+- (void)addButtonToButtonView:(NSString *)name sel:(SEL)selector startX:(NSInteger)x{
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(x, 20, 120, 40)];
+    [button setTitle:name forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.buttonView addSubview:button];
+    [button addTarget:self action:selector forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +105,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"SegueToWebView"]){
+    if([segue.identifier isEqualToString:@"SegueToWeb"]){
         SEL setCitySelector = sel_registerName("setCity:");
         if([segue.destinationViewController respondsToSelector:setCitySelector]){
         [segue.destinationViewController performSelector:setCitySelector withObject:self.cityName afterDelay:0];
@@ -98,7 +140,7 @@
     
     [operation start];
 }
- */
+*/
 
 
 - (NSArray *)parseGeoInfo:(NSDictionary *)place{

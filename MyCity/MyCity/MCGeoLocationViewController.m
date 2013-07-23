@@ -101,7 +101,6 @@
     view.layer.shadowColor = [UIColor blackColor].CGColor;
     view.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
     view.layer.shadowOpacity = 0.5f;
-    
 }
 
 -(void)setUpSuggestionView{

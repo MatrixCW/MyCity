@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MCWebViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property NSString *city;
 - (IBAction)dismissButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *dismissButton;

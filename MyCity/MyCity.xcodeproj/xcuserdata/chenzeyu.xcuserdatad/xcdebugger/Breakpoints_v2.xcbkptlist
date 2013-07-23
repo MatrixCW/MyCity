@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCity/MCGeoLocationViewController.m"
-            timestampString = "396179355.892599"
+            timestampString = "396250163.857632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "-setUpButtons"
             landmarkType = "5">
             <Locations>
@@ -120,12 +120,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCity/MCRandomLocationViewController.m"
-            timestampString = "396182342.317593"
+            timestampString = "396251333.354946"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-exploreAnimation:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -136,12 +136,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCity/MCRandomLocationViewController.m"
-            timestampString = "396182803.376367"
+            timestampString = "396252383.604967"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-getCityGeoInfo"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-didReceiveMemoryWarning"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -151,13 +151,59 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyCity/MCRandomLocationViewController.m"
-            timestampString = "396182821.840163"
+            filePath = "MyCity/MCGeoLocationViewController.m"
+            timestampString = "396250499.172634"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "-prepareForSegue:sender:"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "-setUpButtons"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MCGeoLocationViewController setUpButtons]"
+                  moduleName = "MyCity"
+                  urlString = "file://localhost/Users/chenzeyu/Desktop/enravi/MyCity/MyCity/MyCity/MCGeoLocationViewController.m"
+                  timestampString = "396250499.176085"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "54">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MCGeoLocationViewController setUpButtons]"
+                  moduleName = "MyCity"
+                  urlString = "file://localhost/Users/chenzeyu/Desktop/enravi/MyCity/MyCity/MyCity/MCGeoLocationViewController.m"
+                  timestampString = "396250499.176499"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "222"
+                  endingLineNumber = "222"
+                  offsetFromSymbolStart = "538">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCity/MCRandomLocationViewController.m"
+            timestampString = "396251333.354946"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-setUpButtonView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
