@@ -26,7 +26,6 @@
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:Nil];
     NSArray *lines = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     
-    
     for(int i = 0; i<34; i++){
         int randomCityIndex = i;
         NSString *currentCity = [lines objectAtIndex:randomCityIndex];
@@ -35,7 +34,7 @@
         NSRange range;
         range.location = start;
         range.length = end-start;
-        NSLog(@"%@",[currentCity substringWithRange:range]);
+        //NSLog(@"%@",[currentCity substringWithRange:range]);
         
         /*
          NSArray *parseCityName = [currentCity componentsSeparatedByString:@" "];
@@ -46,6 +45,8 @@
          NSLog(@"%@", finalCityName);
          */
     }
+    
+    [self showRndomLocation:[NSArray arrayWithObjects:@"ChunXilu",@"SiChuan",@"Chengdu",@"China", nil]];
 
 }
 
@@ -99,6 +100,53 @@
     [operation start];
 }
  */
+
+-(void)showRndomLocation:(NSArray*)details{
+    
+    int levelsOfLocation = details.count;
+    NSMutableString *infoString = [NSMutableString stringWithCapacity:15];
+    [infoString appendString:@"Taking you to "];
+    
+    for(int i = 0; i < levelsOfLocation; i++){
+        [infoString appendString:@"\n\n"];
+        [infoString appendString:[details objectAtIndex:i]];
+        
+    }
+    
+    
+    UIView *coverView = [[UIView alloc] initWithFrame:self.mapView.bounds];
+    coverView.backgroundColor = [UIColor blackColor];
+    coverView.alpha = 0.7;
+    
+    UILabel* prompt = [[UILabel alloc] initWithFrame:CGRectMake(36, 145, 248, 200)];
+    prompt.numberOfLines = 0;
+    
+    prompt.textAlignment = NSTextAlignmentCenter;
+    prompt.textColor = [UIColor whiteColor];
+    prompt.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(13.0)];
+    [coverView addSubview:prompt];
+    prompt.text = infoString;
+
+    [self.mapView addSubview:coverView];
+    
+    [self performSelector:@selector(fadeAwayView:) withObject:coverView afterDelay:4];
+}
+
+
+-(void)fadeAwayView:(UIView*)view{
+    
+    [UIView animateWithDuration:2
+                     animations:^{
+                         view.alpha = 0.0;
+                     }
+                     completion:^(BOOL finish){
+                         [view removeFromSuperview];
+
+                                            }
+     ];
+    
+}
+
 
 
 - (NSArray *)parseGeoInfo:(NSDictionary *)place{
