@@ -9,6 +9,7 @@
 #import "MCRandomLocationViewController.h"
 #import "AFJSONRequestOperation.h"
 #import "MCWebViewController.h"
+#import "TRStringExtensions.h"
 @interface MCRandomLocationViewController ()
 
 @end
@@ -41,7 +42,8 @@
     range.location = start;
     range.length = end-start;
     self.cityName = [currentCity substringWithRange:range];
-    self.cityName = @"Shanghai";
+    //self.cityName = @"New York";
+    self.cityName = [self.cityName stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSLog(@"generated names:%@", self.cityName);
     
 }
@@ -103,8 +105,7 @@
 }
 
 - (void)getCityGeoInfo{
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.cityName]];
-    NSLog(@"%@lllllll", url);
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.cityName urlEncode]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *result = [JSON objectForKey:@"results"];
@@ -128,7 +129,7 @@
         [self performSelector:@selector(setUpButtonView) withObject:nil afterDelay:3];
         return;
     }
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.names objectAtIndex:self.currentIndex]]];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [[self.names objectAtIndex:self.currentIndex]urlEncode]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *result = [JSON objectForKey:@"results"];
@@ -137,6 +138,7 @@
         NSArray *location = [self parseGeoInfo:place];
         
         [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[location objectAtIndex:0] floatValue], [[location objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[location objectAtIndex:2] floatValue] - [[location objectAtIndex:4] floatValue]), fabs([[location objectAtIndex:3] floatValue] - [[location objectAtIndex:5] floatValue]))) animated:YES];
+        
         if(self.currentIndex < self.names.count){
             [self performSelector:@selector(moveToCity) withObject:nil afterDelay:3];
             self.currentIndex -- ;
