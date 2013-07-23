@@ -12,4 +12,8 @@
 @property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property UIView *buttonView;
+@property NSString *formattedName;
+@property NSArray *locationInfo;
+@property NSArray *names;
+@property int currentIndex;
 @end

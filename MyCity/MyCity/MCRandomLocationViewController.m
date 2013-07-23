@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cityName = @"Beijing";
+    self.cityName = [self generateRandomNames];
     //[self setUpAndShowWebView];
 	// Do any additional setup after loading the view.
     
@@ -46,8 +46,10 @@
          NSLog(@"%@", finalCityName);
          */
     }
-    [self setUpButtonView];
-    [self showRndomLocation:[NSArray arrayWithObjects:@"ChunXilu",@"SiChuan",@"Chengdu",@"China", nil]];
+    
+    //[self setUpButtonView];
+    [self getCityGeoInfo];
+    
 }
 
 - (IBAction)backButtonPressed:(id)sender {
@@ -73,7 +75,7 @@
     [self addButtonToButtonView:@"Learn More" sel:openWebView startX:20];
     [self addButtonToButtonView:@"Back" sel:back startX:180];
     [UIView animateWithDuration:1 animations:^{
-        self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 300);
+        self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 400);
     }completion:^(BOOL finished){
         
     }];
@@ -97,13 +99,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)exploreAnimation:(MKCoordinateRegion)region{
-    
-    [UIView animateWithDuration:3 animations:^{
-        [self.mapView setRegion:region];
-    }];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"SegueToWeb"]){
         SEL setCitySelector = sel_registerName("setCity:");
@@ -113,26 +108,16 @@
     }
 }
 
-/*
 - (void)getCityGeoInfo{
-    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.formattedCityName urlEncode]]];
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.cityName]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
-        
-        
         NSDictionary *place = [result objectAtIndex:0];
-        
-        self.formattedCityName = (NSString *)place[@"formatted_address"];
-        self.locationInfo = [self parseGeoInfo:place];
-        
-        if(needResetButtons)
-            [self setUpButtons];
-        
-        [self.MapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[self.locationInfo objectAtIndex:0] floatValue], [[self.locationInfo objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[self.locationInfo objectAtIndex:2] floatValue] - [[self.locationInfo objectAtIndex:4] floatValue]), fabs([[self.locationInfo objectAtIndex:3] floatValue] - [[self.locationInfo objectAtIndex:5] floatValue]))) animated:YES];
-        
-        
+        self.formattedName = (NSString *)place[@"formatted_address"];
+        self.names = [self.formattedName componentsSeparatedByString:@", "];
+        self.currentIndex = self.names.count - 1;
+        [self showRndomLocation:self.names];
         
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json){
         NSLog(@"fail to get city info: %@",error.description);
@@ -140,7 +125,31 @@
     
     [operation start];
 }
-*/
+
+- (void)moveToCity{
+    
+    
+    if(self.currentIndex < 0) return;
+    NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.names objectAtIndex:self.currentIndex]]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSArray *result = [JSON objectForKey:@"results"];
+        NSDictionary *place = [result objectAtIndex:0];
+        
+        NSArray *location = [self parseGeoInfo:place];
+        
+        [self.mapView setRegion:MKCoordinateRegionMake(CLLocationCoordinate2DMake([[location objectAtIndex:0] floatValue], [[location objectAtIndex:1] floatValue]), MKCoordinateSpanMake(fabs([[location objectAtIndex:2] floatValue] - [[location objectAtIndex:4] floatValue]), fabs([[location objectAtIndex:3] floatValue] - [[location objectAtIndex:5] floatValue]))) animated:YES];
+        if(self.currentIndex < self.names.count){
+            [self performSelector:@selector(moveToCity) withObject:nil afterDelay:3];
+            self.currentIndex -- ;
+        }
+                
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id json){
+        NSLog(@"fail to get city info: %@",error.description);
+    }];
+    
+    [operation start];
+}
 
 -(void)showRndomLocation:(NSArray*)details{
     
@@ -182,6 +191,7 @@
                      }
                      completion:^(BOOL finish){
                          [view removeFromSuperview];
+                         [self moveToCity];
 
                                             }
      ];
