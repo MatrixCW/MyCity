@@ -19,40 +19,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cityName = [self generateRandomNames];
-    //[self setUpAndShowWebView];
-	// Do any additional setup after loading the view.
+    [self generateRandomCityName];
+    //self.cityName = @"Shanghai";
+
+    [self getCityGeoInfo];
+    
+}
+
+
+-(void)generateRandomCityName{
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"cool" ofType:@"txt"];
     NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:Nil];
     NSArray *lines = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     
-    for(int i = 0; i<34; i++){
-        int randomCityIndex = i;
-        NSString *currentCity = [lines objectAtIndex:randomCityIndex];
-        int start = [currentCity rangeOfString:@" "].location;
-        int end = [currentCity rangeOfString:@","].location;
-        NSRange range;
-        range.location = start;
-        range.length = end-start;
-        //NSLog(@"%@",[currentCity substringWithRange:range]);
-        
-        /*
-         NSArray *parseCityName = [currentCity componentsSeparatedByString:@" "];
-         NSLog(@"%d",randomCityIndex);
-         NSString *tempCithName = [parseCityName objectAtIndex:1];
-         NSString *finalCityName = [tempCithName substringToIndex:tempCithName.length-1];
-         NSLog(@"%@",tempCithName);
-         NSLog(@"%@", finalCityName);
-         */
-    }
-    
-    //[self setUpButtonView];
-    [self getCityGeoInfo];
+    int randomCityIndex = arc4random()%34;
+    NSString *currentCity = [lines objectAtIndex:randomCityIndex];
+    int start = [currentCity rangeOfString:@" "].location;
+    int end = [currentCity rangeOfString:@","].location;
+    NSRange range;
+    range.location = start;
+    range.length = end-start;
+    self.cityName = [currentCity substringWithRange:range];
+    self.cityName = @"Shanghai";
+    NSLog(@"generated names:%@", self.cityName);
     
 }
-
-- (IBAction)backButtonPressed:(id)sender {
+- (void)backButtonPressed:(id)sender {
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -103,13 +96,15 @@
     if([segue.identifier isEqualToString:@"SegueToWeb"]){
         SEL setCitySelector = sel_registerName("setCity:");
         if([segue.destinationViewController respondsToSelector:setCitySelector]){
-        [segue.destinationViewController performSelector:setCitySelector withObject:self.cityName afterDelay:0];
+            MCWebViewController *vc = (MCWebViewController *)segue.destinationViewController;
+            vc.city = self.cityName;
         }
     }
 }
 
 - (void)getCityGeoInfo{
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", self.cityName]];
+    NSLog(@"%@lllllll", url);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *result = [JSON objectForKey:@"results"];
@@ -129,7 +124,10 @@
 - (void)moveToCity{
     
     
-    if(self.currentIndex < 0) return;
+    if(self.currentIndex < 0){
+        [self performSelector:@selector(setUpButtonView) withObject:nil afterDelay:3];
+        return;
+    }
     NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false", [self.names objectAtIndex:self.currentIndex]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {

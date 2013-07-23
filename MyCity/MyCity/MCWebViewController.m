@@ -30,7 +30,6 @@
     NSURL *url = [NSURL URLWithString:fullURL];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:requestObj];
-    [self addShadowToView: self.dismissButton];
 	// Do any additional setup after loading the view.
 }
 
@@ -49,7 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)dismissButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+
+- (IBAction)backButtonPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:Nil];
 }
 @end
