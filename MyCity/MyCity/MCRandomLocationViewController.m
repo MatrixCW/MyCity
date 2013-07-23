@@ -23,34 +23,29 @@
     //[self setUpAndShowWebView];
 	// Do any additional setup after loading the view.
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"cool" ofType:@"txt"];
-    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:Nil];
-    NSArray *lines = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    
-    for(int i = 0; i<34; i++){
-        int randomCityIndex = i;
-        NSString *currentCity = [lines objectAtIndex:randomCityIndex];
-        int start = [currentCity rangeOfString:@" "].location;
-        int end = [currentCity rangeOfString:@","].location;
-        NSRange range;
-        range.location = start;
-        range.length = end-start;
-        //NSLog(@"%@",[currentCity substringWithRange:range]);
         
-        /*
-         NSArray *parseCityName = [currentCity componentsSeparatedByString:@" "];
-         NSLog(@"%d",randomCityIndex);
-         NSString *tempCithName = [parseCityName objectAtIndex:1];
-         NSString *finalCityName = [tempCithName substringToIndex:tempCithName.length-1];
-         NSLog(@"%@",tempCithName);
-         NSLog(@"%@", finalCityName);
-         */
-    }
     [self setUpButtonView];
     [self showRndomLocation:[NSArray arrayWithObjects:@"ChunXilu",@"SiChuan",@"Chengdu",@"China", nil]];
 }
 
-- (IBAction)backButtonPressed:(id)sender {
+
+-(void)generateRandomCityName{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"cool" ofType:@"txt"];
+    NSString *content = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:Nil];
+    NSArray *lines = [content componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    
+    int randomCityIndex = arc4random();
+    NSString *currentCity = [lines objectAtIndex:randomCityIndex];
+    int start = [currentCity rangeOfString:@" "].location;
+    int end = [currentCity rangeOfString:@","].location;
+    NSRange range;
+    range.location = start;
+    range.length = end-start;
+    self.cityName = [currentCity substringWithRange:range];
+    
+}
+- (void)backButtonPressed:(id)sender {
     
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
@@ -73,7 +68,7 @@
     [self addButtonToButtonView:@"Learn More" sel:openWebView startX:20];
     [self addButtonToButtonView:@"Back" sel:back startX:180];
     [UIView animateWithDuration:1 animations:^{
-        self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 300);
+        self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 400);
     }completion:^(BOOL finished){
         
     }];
