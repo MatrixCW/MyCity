@@ -22,11 +22,11 @@
 {
     [super viewDidLoad];
     
-    self.currentExploringType = RandomExploreMode;
+    //self.currentExploringType = RandomExploreMode;
     
-    if(self.currentExploringType == RandomExploreMode){
-        [self EnterRandomExploreMode];
-    }
+    //if(self.currentExploringType == RandomExploreMode){
+        //[self EnterRandomExploreMode];
+    //}
     
 }
 
@@ -75,7 +75,7 @@
 }
 
 - (void)setUpButtonView{
-    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.mapView.frame.origin.y + self.mapView.frame.size.height + 200, 300, 80)];
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.mapView.frame.origin.y + self.mapView.frame.size.height + 300, 250, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
     [self addShadowToView:self.buttonView];
@@ -83,7 +83,7 @@
     SEL back = @selector(backButtonPressed:);
     SEL openWebView = @selector(openWebView:);
     [self addButtonToButtonView:@"Learn More" sel:openWebView startX:20];
-    [self addButtonToButtonView:@"Back" sel:back startX:180];
+    [self addButtonToButtonView:@"Back" sel:back startX:140];
     [UIView animateWithDuration:1 animations:^{
         self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 400);
     }completion:^(BOOL finished){
