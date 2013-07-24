@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-@interface MCRandomLocationViewController : UIViewController
+
+@interface MCCityExplorerViewController : UIViewController
+
+
+typedef enum {
+    RandomExploreMode,
+    SpecificExploreMode
+} ExploringType ;
+
 
 @property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -17,4 +25,7 @@
 @property NSArray *locationInfo;
 @property NSArray *names;
 @property int currentIndex;
+
+@property ExploringType currentExploringType;
+
 @end

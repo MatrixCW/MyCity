@@ -44,7 +44,7 @@
 		4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE93531795315900C875D4 /* MCLogInViewController.m */; };
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
 		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
-		C90DCAC6179D336B0037A3C1 /* MCRandomLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */; };
+		C90DCAC6179D336B0037A3C1 /* MCCityExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */; };
 		C90DCACE179D481D0037A3C1 /* cool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cool.txt */; };
 		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */; };
@@ -146,8 +146,8 @@
 		4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-at-night-shmlcbm.jpg"; sourceTree = "<group>"; };
 		4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEnterCityViewController.h; sourceTree = "<group>"; };
 		4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEnterCityViewController.m; sourceTree = "<group>"; };
-		C90DCAC4179D336B0037A3C1 /* MCRandomLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRandomLocationViewController.h; sourceTree = "<group>"; };
-		C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCRandomLocationViewController.m; sourceTree = "<group>"; };
+		C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCityExplorerViewController.h; sourceTree = "<group>"; };
+		C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCityExplorerViewController.m; sourceTree = "<group>"; };
 		C90DCACD179D481D0037A3C1 /* cool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cool.txt; sourceTree = "<group>"; };
 		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
 		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
@@ -350,8 +350,8 @@
 				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
-				C90DCAC4179D336B0037A3C1 /* MCRandomLocationViewController.h */,
-				C90DCAC5179D336B0037A3C1 /* MCRandomLocationViewController.m */,
+				C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */,
+				C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */,
 				4BC648C1179D388700B85D70 /* MCWebViewController.h */,
 				4BC648C2179D388700B85D70 /* MCWebViewController.m */,
 				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
@@ -530,7 +530,7 @@
 				4BA3390F179809E500A660A3 /* AFXMLRequestOperation.m in Sources */,
 				4B4EBFD21796CC1F00BE0DA9 /* MCDemographicViewController.m in Sources */,
 				4BA3390C179809E500A660A3 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				C90DCAC6179D336B0037A3C1 /* MCRandomLocationViewController.m in Sources */,
+				C90DCAC6179D336B0037A3C1 /* MCCityExplorerViewController.m in Sources */,
 				4BC648BF179D259800B85D70 /* TRGoogleMapsAutocompleteItemsSource.m in Sources */,
 				4B4EBFCF179684D100BE0DA9 /* MCIconicPlaceViewController.m in Sources */,
 				4BA338F0179809B200A660A3 /* TRGoogleMapsAutocompletionCellFactory.m in Sources */,
