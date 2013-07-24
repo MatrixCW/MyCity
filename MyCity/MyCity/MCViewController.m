@@ -25,6 +25,8 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     
+    /*
+    
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         MCLogInViewController *logInViewController = [[MCLogInViewController alloc] init];
@@ -41,6 +43,7 @@
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
     }
+     */
     
 }
 

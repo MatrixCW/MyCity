@@ -6,24 +6,39 @@
 //
 //
 
-#import "MCRandomLocationViewController.h"
+#import "MCCityExplorerViewController.h"
 #import "AFJSONRequestOperation.h"
 #import "MCWebViewController.h"
 #import "TRStringExtensions.h"
-@interface MCRandomLocationViewController ()
+
+@interface MCCityExplorerViewController ()
 
 @end
 
-@implementation MCRandomLocationViewController
+@implementation MCCityExplorerViewController
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self generateRandomCityName];
-    //self.cityName = @"Shanghai";
+    
+    //self.currentExploringType = RandomExploreMode;
+    
+    //if(self.currentExploringType == RandomExploreMode){
+        //[self EnterRandomExploreMode];
+    //}
+    
+}
 
+
+-(void)EnterRandomExploreMode{
+    
+    [self generateRandomCityName];
     [self getCityGeoInfo];
+    
+}
+
+-(void)EnterSpecificExploreMode{
     
 }
 
