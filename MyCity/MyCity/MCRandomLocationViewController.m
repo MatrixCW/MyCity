@@ -60,6 +60,7 @@
 }
 
 - (void)setUpButtonView{
+    
     self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.mapView.frame.origin.y + self.mapView.frame.size.height + 300, 250, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
@@ -72,7 +73,7 @@
     [UIView animateWithDuration:1 animations:^{
         self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 400);
     }completion:^(BOOL finished){
-        
+        self.homeButton.hidden = NO;
     }];
 }
 
@@ -208,5 +209,8 @@
     NSNumber *southWestLat = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lat"] floatValue]];
     NSNumber *southWestLng = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lng"] floatValue]];
     return [NSArray arrayWithObjects:locationLat, locationLng,northEastLat, northEastLng, southWestLat, southWestLng, nil];
+}
+- (IBAction)homeButtonPressed:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

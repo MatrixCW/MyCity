@@ -10,6 +10,9 @@
 #import <MapKit/MapKit.h>
 @interface MCRandomLocationViewController : UIViewController
 
+- (IBAction)homeButtonPressed:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
 @property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property UIView *buttonView;
