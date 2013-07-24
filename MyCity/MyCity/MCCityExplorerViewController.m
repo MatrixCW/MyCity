@@ -172,6 +172,7 @@
     NSLog(@"generated names:%@", self.cityName);
     
 }
+
 - (void)backButtonPressed:(id)sender {
     
     [self.navigationController popToRootViewControllerAnimated:YES];
@@ -292,9 +293,9 @@
     }
     
     
-    UIView *coverView = [[UIView alloc] initWithFrame:self.mapView.bounds];
-    coverView.backgroundColor = [UIColor blackColor];
-    coverView.alpha = 0.7;
+    self.blackBackgroundView = [[UIView alloc] initWithFrame:self.mapView.bounds];
+    self.blackBackgroundView.backgroundColor = [UIColor blackColor];
+    self.blackBackgroundView.alpha = 0.7;
     
     UILabel* prompt = [[UILabel alloc] initWithFrame:CGRectMake(36, 145, 248, 200)];
     prompt.numberOfLines = 0;
@@ -302,12 +303,12 @@
     prompt.textAlignment = NSTextAlignmentCenter;
     prompt.textColor = [UIColor whiteColor];
     prompt.font = [UIFont fontWithName:@"Arial Rounded MT Bold" size:(13.0)];
-    [coverView addSubview:prompt];
+    [self.blackBackgroundView addSubview:prompt];
     prompt.text = infoString;
 
-    [self.mapView addSubview:coverView];
+    [self.mapView addSubview:self.blackBackgroundView];
     
-    [self performSelector:@selector(fadeAwayView:) withObject:coverView afterDelay:4];
+    [self performSelector:@selector(fadeAwayView:) withObject:self.blackBackgroundView afterDelay:4];
 }
 
 
