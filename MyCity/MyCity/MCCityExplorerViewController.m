@@ -125,22 +125,23 @@
 
 - (void)suggestionPressed{
     
-    //self.homeButton.hidden = YES;
     [self.buttonView removeFromSuperview];
-    NSString *cityName = [[[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
+    self.homeButton.hidden = YES;
+    [self.buttonView removeFromSuperview];
+    
+    NSString *cityName = [[[[self.inputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
                             stringByReplacingOccurrencesOfString:@"," withString:@" "]
                            stringByReplacingOccurrencesOfString:@"  " withString:@" "]
                           stringByReplacingOccurrencesOfString:@" " withString:@",+"];
-    self.formattedCityName = cityName;
+    self.cityName = cityName;
     NSLog(@"%@", cityName);
-    [self.InputTextField resignFirstResponder];
+    [self.inputTextField resignFirstResponder];
     
     if(_autocompleteView.suggestions.count != 0){
         [self getCityGeoInfo];
-        [self setUpButtonView];
     }
     
-    else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
+    //else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
 }
 
 
@@ -176,6 +177,7 @@
 }
 
 - (void)setUpButtonView{
+    
     self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.mapView.frame.origin.y + self.mapView.frame.size.height + 300, 250, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
@@ -188,7 +190,7 @@
     [UIView animateWithDuration:1 animations:^{
         self.buttonView.center = CGPointMake(self.buttonView.center.x, self.buttonView.center.y - 400);
     }completion:^(BOOL finished){
-        
+        self.homeButton.hidden = NO;
     }];
 }
 
@@ -324,5 +326,9 @@
     NSNumber *southWestLat = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lat"] floatValue]];
     NSNumber *southWestLng = [NSNumber numberWithFloat:[[place objectForKey:@"geometry"][@"viewport"][@"southwest"][@"lng"] floatValue]];
     return [NSArray arrayWithObjects:locationLat, locationLng,northEastLat, northEastLng, southWestLat, southWestLng, nil];
+}
+
+- (IBAction)homeButtonPressed:(id)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

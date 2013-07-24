@@ -20,6 +20,9 @@ typedef enum {
     SpecificExploreMode
 } ExploringType ;
 
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
+
+- (IBAction)homeButtonPressed:(id)sender;
 
 @property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

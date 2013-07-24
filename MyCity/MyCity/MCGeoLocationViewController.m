@@ -318,7 +318,7 @@
         self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
         NSDictionary *place = [result objectAtIndex:0];
-        if([MCGoogleResultParser isACountry:place]){
+        if([MCGoogleResultParser isACountry:place] && needResetButtons){
             [self showAlertViewWithTitle:@"A Country Entered" message: [NSString stringWithFormat:@"Please Enter a City in %@",(NSString *)place[@"formatted_address"]]];
         }
         self.formattedCityName = (NSString *)place[@"formatted_address"];
