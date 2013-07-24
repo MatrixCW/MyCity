@@ -17,6 +17,7 @@ typedef enum {
     SpecificExploreMode
 } ExploringType ;
 
+@property (weak, nonatomic) IBOutlet UIButton *homeButton;
 
 - (IBAction)homeButtonPressed:(id)sender;
 
