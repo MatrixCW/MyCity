@@ -38,12 +38,19 @@
 }
 
 
--(void)queryExploringMode{
+-(void) setUpCoverView{
     
     self.blackBackgroundView = [[UIView alloc] initWithFrame:self.mapView.bounds];
     self.blackBackgroundView .backgroundColor = [UIColor blackColor];
     self.blackBackgroundView .alpha = 0.7;
+
     
+}
+
+-(void)queryExploringMode{
+    
+    [self setUpCoverView];
+        
     UIButton *randomExploring = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [randomExploring addTarget:self
                action:@selector(setRandomExplorerMode)
@@ -167,7 +174,7 @@
 
 - (void)backButtonPressed:(id)sender {
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self returnToMainScreen];
 }
 
 - (void)addShadowToView:(UIView *)view{
@@ -283,9 +290,7 @@
     }
     
     
-    self.blackBackgroundView = [[UIView alloc] initWithFrame:self.mapView.bounds];
-    self.blackBackgroundView.backgroundColor = [UIColor blackColor];
-    self.blackBackgroundView.alpha = 0.7;
+    [self setUpCoverView];
     
     UILabel* prompt = [[UILabel alloc] initWithFrame:CGRectMake(36, 145, 248, 200)];
     prompt.numberOfLines = 0;
@@ -330,6 +335,13 @@
 }
 
 - (IBAction)homeButtonPressed:(id)sender {
+    [self returnToMainScreen];
+}
+
+
+-(void) returnToMainScreen{
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 @end
