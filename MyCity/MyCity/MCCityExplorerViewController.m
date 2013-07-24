@@ -127,7 +127,6 @@
     
     [self.buttonView removeFromSuperview];
     self.homeButton.hidden = YES;
-    [self.buttonView removeFromSuperview];
     
     NSString *cityName = [[[[self.inputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
                             stringByReplacingOccurrencesOfString:@"," withString:@" "]
@@ -141,9 +140,18 @@
         [self getCityGeoInfo];
     }
     
-    //else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
+    else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
 }
 
+
+- (void)showAlertViewWithTitle:(NSString *)title message:(NSString *)content{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+                                                    message:content
+                                                   delegate:Nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 -(void)generateRandomCityName{
     
@@ -217,7 +225,9 @@
         SEL setCitySelector = sel_registerName("setCity:");
         if([segue.destinationViewController respondsToSelector:setCitySelector]){
             MCWebViewController *vc = (MCWebViewController *)segue.destinationViewController;
-            vc.city = self.cityName;
+            NSLog(@"fffff %@",self.cityName);
+            vc.city = [self.formattedName urlEncode];
+            NSLog(@"%@", vc.city);
         }
     }
 }
@@ -331,4 +341,23 @@
 - (IBAction)homeButtonPressed:(id)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    if ([self.inputTextField isFirstResponder] && [touch view] != self.inputTextField) {
+        [self.inputTextField resignFirstResponder];
+    }
+    
+    [super touchesBegan:touches withEvent:event];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self suggestionPressed];
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
 @end

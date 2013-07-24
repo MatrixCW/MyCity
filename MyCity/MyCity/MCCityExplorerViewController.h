@@ -12,7 +12,7 @@
 #import "TRGoogleMapsAutocompleteItemsSource.h"
 #import "TRGoogleMapsAutocompletionCellFactory.h"
 
-@interface MCCityExplorerViewController : UIViewController<AutoCompleteDelegate>
+@interface MCCityExplorerViewController : UIViewController<AutoCompleteDelegate, UITextFieldDelegate>
 
 
 typedef enum {
