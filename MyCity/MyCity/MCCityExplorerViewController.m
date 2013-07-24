@@ -15,15 +15,22 @@
 
 @end
 
-@implementation MCCityExplorerViewController
+@implementation MCCityExplorerViewController{
+    
+    TRAutocompleteView *_autocompleteView;
+    
+}
+
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    //self.currentExploringType = RandomExploreMode;
     
+    
+    //self.currentExploringType = RandomExploreMode;
+    [self queryExploringMode];
     //if(self.currentExploringType == RandomExploreMode){
         //[self EnterRandomExploreMode];
     //}
@@ -31,6 +38,47 @@
 }
 
 
+-(void)queryExploringMode{
+    
+    self.blackBackgroundView = [[UIView alloc] initWithFrame:self.mapView.bounds];
+    self.blackBackgroundView .backgroundColor = [UIColor blackColor];
+    self.blackBackgroundView .alpha = 0.7;
+    
+    UIButton *randomExploring = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [randomExploring addTarget:self
+               action:@selector(setRandomExplorerMode)
+     forControlEvents:UIControlEventTouchUpInside];
+    [randomExploring setTitle:@"Explore a random city" forState:UIControlStateNormal];
+    randomExploring.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    
+    UIButton *specificExploring = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [specificExploring addTarget:self
+                        action:@selector(setSpecificExplorerMode)
+              forControlEvents:UIControlEventTouchUpInside];
+    [specificExploring setTitle:@"Explore a specific city" forState:UIControlStateNormal];
+    specificExploring.frame = CGRectMake(80.0, 280.0, 160.0, 40.0);
+    
+    [self.blackBackgroundView  addSubview:randomExploring];
+    [self.blackBackgroundView  addSubview:specificExploring];
+    
+    [self.mapView addSubview:self.blackBackgroundView ];
+    
+}
+
+-(void)setRandomExplorerMode{
+    
+    [self.blackBackgroundView removeFromSuperview];
+    [self EnterRandomExploreMode];
+    
+}
+
+
+-(void)setSpecificExplorerMode{
+    
+    [self.blackBackgroundView removeFromSuperview];
+    [self EnterSpecificExploreMode];
+    
+}
 -(void)EnterRandomExploreMode{
     
     [self generateRandomCityName];
@@ -40,6 +88,59 @@
 
 -(void)EnterSpecificExploreMode{
     
+
+    /*
+    self.inputTextHolderView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 280, 30)];
+    self.inputTextHolderView.backgroundColor = [UIColor whiteColor];
+    [self addShadowToView:self.inputTextHolderView];
+     */
+    
+    self.inputTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 20, 280, 30)];
+    self.inputTextField.backgroundColor = [UIColor whiteColor];
+    self.inputTextField.borderStyle = UITextBorderStyleNone;
+    self.inputTextField.font = [UIFont systemFontOfSize:15];
+    self.inputTextField.placeholder = @"enter a city name";
+    self.inputTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    self.inputTextField.keyboardType = UIKeyboardTypeDefault;
+    self.inputTextField.returnKeyType = UIReturnKeyDone;
+    self.inputTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    self.inputTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    self.inputTextField.textAlignment = NSTextAlignmentCenter;
+    
+         
+    
+    _autocompleteView = [TRAutocompleteView autocompleteViewBindedTo:self.inputTextField
+                                                         usingSource:[[TRGoogleMapsAutocompleteItemsSource alloc] initWithMinimumCharactersToTrigger:2 apiKey:@"INSERT_YOUR_PLACES_API_KEY_HERE"]
+                                                         cellFactory:[[TRGoogleMapsAutocompletionCellFactory alloc] initWithCellForegroundColor:[UIColor lightGrayColor] fontSize:14]
+                                                        presentingIn:self];
+    _autocompleteView.geoDelegate = self;
+    
+    [self addShadowToView:self.inputTextField];
+    [self addShadowToView:_autocompleteView];
+    [self.mapView addSubview:self.inputTextField];
+
+    
+}
+
+
+- (void)suggestionPressed{
+    
+    //self.homeButton.hidden = YES;
+    [self.buttonView removeFromSuperview];
+    NSString *cityName = [[[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
+                            stringByReplacingOccurrencesOfString:@"," withString:@" "]
+                           stringByReplacingOccurrencesOfString:@"  " withString:@" "]
+                          stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+    self.formattedCityName = cityName;
+    NSLog(@"%@", cityName);
+    [self.InputTextField resignFirstResponder];
+    
+    if(_autocompleteView.suggestions.count != 0){
+        [self getCityGeoInfo];
+        [self setUpButtonView];
+    }
+    
+    else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
 }
 
 

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "TRAutocompleteView.h"
+#import "TRGoogleMapsAutocompleteItemsSource.h"
+#import "TRGoogleMapsAutocompletionCellFactory.h"
 
-@interface MCCityExplorerViewController : UIViewController
+@interface MCCityExplorerViewController : UIViewController<AutoCompleteDelegate>
 
 
 typedef enum {
@@ -25,6 +28,10 @@ typedef enum {
 @property NSArray *locationInfo;
 @property NSArray *names;
 @property int currentIndex;
+
+@property UITextField *inputTextField;
+
+@property UIView *blackBackgroundView;
 
 @property ExploringType currentExploringType;
 

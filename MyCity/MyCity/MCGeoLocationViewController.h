@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 
 #define SEGUETONEXT @"GeoLocationToIconicPlace"
+
 @protocol AutoCompleteDelegate
 - (void)suggestionPressed;
 @end
