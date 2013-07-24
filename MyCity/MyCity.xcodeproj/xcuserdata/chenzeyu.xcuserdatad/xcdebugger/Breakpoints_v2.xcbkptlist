@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCity/MCGeoLocationViewController.m"
-            timestampString = "396250163.857632"
+            timestampString = "396341257.961921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "-setUpButtons"
             landmarkType = "5">
             <Locations>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCity/MCGeoLocationViewController.m"
-            timestampString = "396250499.172634"
+            timestampString = "396341257.961921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-setUpButtons"
             landmarkType = "5">
             <Locations>

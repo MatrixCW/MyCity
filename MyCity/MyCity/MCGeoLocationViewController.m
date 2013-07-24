@@ -15,7 +15,7 @@
 #import "ECSlidingViewController.h"
 #import "MCMenuViewController.h"
 #import "TRStringExtensions.h"
-
+#import "MCGoogleResultParser.h"
 @implementation MCGeoLocationViewController{
     
     TRAutocompleteView *_autocompleteView;
@@ -53,11 +53,12 @@
     
 }
 - (void)setUpButtonView{
-    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 200, 200, 80)];
+    self.buttonView = [[UIView alloc] initWithFrame:CGRectMake(10, self.MapView.frame.origin.y + self.MapView.frame.size.height - 100, 200, 80)];
     self.buttonView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.buttonView];
     [self addShadowToView:self.buttonView];
     self.buttonView.layer.opacity = 0.85;
+    self.homeButton.hidden = NO;
     
 }
 
@@ -226,10 +227,6 @@
     self.formattedCityNameArray = [self.formattedCityName componentsSeparatedByString:@", "];
     
     
-    for(id object in self.formattedCityNameArray){
-        NSLog(@"dddfffdfdf %@",(NSString*)object);
-    }
-    
     UIPickerView *pickRegion = [[UIPickerView alloc] initWithFrame:CGRectMake(25, -40, 150, 80)];
     pickRegion.dataSource = self;
     pickRegion.delegate = self;
@@ -293,8 +290,8 @@
 - (IBAction)GoButtonPressed:(id)sender {
     
     needResetButtons = true;
+    self.homeButton.hidden = YES;
     [self.buttonView removeFromSuperview];
-    [self setUpButtonView];
     NSString *cityName = [[[[self.InputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
         stringByReplacingOccurrencesOfString:@"," withString:@" "]
         stringByReplacingOccurrencesOfString:@"  " withString:@" "]
@@ -305,7 +302,8 @@
     
     if(_autocompleteView.suggestions.count != 0){
         [self getCityGeoInfo];
-    } 
+        [self setUpButtonView];
+    }
     
     else [self showAlertViewWithTitle:@"No Cities Found" message:nil];
     
@@ -319,10 +317,10 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         self.geoCodeInfo = JSON;
         NSArray *result = [JSON objectForKey:@"results"];
-        
-        
         NSDictionary *place = [result objectAtIndex:0];
-            
+        if([MCGoogleResultParser isACountry:place]){
+            [self showAlertViewWithTitle:@"A Country Entered" message: [NSString stringWithFormat:@"Please Enter a City in %@",(NSString *)place[@"formatted_address"]]];
+        }
         self.formattedCityName = (NSString *)place[@"formatted_address"];
         self.locationInfo = [self parseGeoInfo:place];
         
@@ -371,5 +369,9 @@
 - (void)suggestionPressed{
     
     [self GoButtonPressed:nil];
+}
+
+- (void)homeButtonPressed:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end
