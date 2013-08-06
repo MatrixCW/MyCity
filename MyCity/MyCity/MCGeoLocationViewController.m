@@ -16,6 +16,8 @@
 #import "MCMenuViewController.h"
 #import "TRStringExtensions.h"
 #import "MCGoogleResultParser.h"
+
+
 @implementation MCGeoLocationViewController{
     
     TRAutocompleteView *_autocompleteView;

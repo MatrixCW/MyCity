@@ -195,8 +195,17 @@
         return;
     }
     
+    NSString *cityNamesToQuery = @"";
     
-    NSString *encodedAreaName = [[self.levelOfAdministrations objectAtIndex:self.currentIndex]urlEncode];
+    for(int i = self.currentIndex; i < self.levelOfAdministrations.count; i ++){
+    
+        cityNamesToQuery = [cityNamesToQuery stringByAppendingString:[self.levelOfAdministrations objectAtIndex:i]];
+        cityNamesToQuery = [cityNamesToQuery stringByAppendingString:@" "];
+
+        
+    }
+        
+    NSString *encodedAreaName = [cityNamesToQuery urlEncode];
     NSString *queryGoogleMapUrl = [NSString stringWithFormat:GOOGLE_MAP_API_ADDRESS, encodedAreaName];
     NSURL *url = [NSURL URLWithString: queryGoogleMapUrl];
     
@@ -299,10 +308,7 @@
     
     [self.buttonView removeFromSuperview];
     
-    NSString *cityName = [[[[self.inputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""]
-                            stringByReplacingOccurrencesOfString:@"," withString:@" "]
-                           stringByReplacingOccurrencesOfString:@"  " withString:@" "]
-                          stringByReplacingOccurrencesOfString:@" " withString:@",+"];
+    NSString *cityName = [self.inputTextField.text stringByReplacingOccurrencesOfString:@"          (A Country)" withString:@""];
     
     self.cityName = cityName;
     NSLog(@"%@", cityName);
