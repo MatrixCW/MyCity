@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface MCGoogleResultParser : NSObject
+
 + (BOOL) isACity:(NSDictionary *)place;
 + (BOOL) isACountry:(NSDictionary *)place;
 

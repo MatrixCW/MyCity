@@ -20,22 +20,17 @@ typedef enum {
     SpecificExploreMode
 } ExploringType ;
 
-@property (weak, nonatomic) IBOutlet UIButton *homeButton;
 
-- (IBAction)homeButtonPressed:(id)sender;
-
-@property NSString *cityName;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 @property UIView *buttonView;
+@property NSString *cityName;
 @property NSString *formattedName;
 @property NSArray *locationInfo;
-@property NSArray *names;
+@property NSArray *levelOfAdministrations;
 @property int currentIndex;
-
 @property UITextField *inputTextField;
-
 @property UIView *blackBackgroundView;
-
 @property ExploringType currentExploringType;
 
 @end

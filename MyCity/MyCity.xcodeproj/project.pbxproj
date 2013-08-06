@@ -46,7 +46,7 @@
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
 		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
 		C90DCAC6179D336B0037A3C1 /* MCCityExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */; };
-		C90DCACE179D481D0037A3C1 /* cool.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cool.txt */; };
+		C90DCACE179D481D0037A3C1 /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cities.txt */; };
 		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
@@ -71,6 +71,7 @@
 		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
 		C9CBED0717990CBE006751D1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CBED0617990CBE006751D1 /* button.png */; };
 		C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CBED0917990E62006751D1 /* MapPreviewController.m */; };
+		C9F535D217B1449800696980 /* MCUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F535D117B1449800696980 /* MCUIUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +151,7 @@
 		4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEnterCityViewController.m; sourceTree = "<group>"; };
 		C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCityExplorerViewController.h; sourceTree = "<group>"; };
 		C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCityExplorerViewController.m; sourceTree = "<group>"; };
-		C90DCACD179D481D0037A3C1 /* cool.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cool.txt; sourceTree = "<group>"; };
+		C90DCACD179D481D0037A3C1 /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
 		C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCGeoLocationViewController.h; sourceTree = "<group>"; };
 		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTetrad.h; sourceTree = "<group>"; };
@@ -186,6 +187,8 @@
 		C9CBED0617990CBE006751D1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		C9CBED0817990E62006751D1 /* MapPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPreviewController.h; sourceTree = "<group>"; };
 		C9CBED0917990E62006751D1 /* MapPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPreviewController.m; sourceTree = "<group>"; };
+		C9F535D017B1449800696980 /* MCUIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIUtil.h; sourceTree = "<group>"; };
+		C9F535D117B1449800696980 /* MCUIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,10 +350,12 @@
 				4BA338F4179809E500A660A3 /* AFNetworking */,
 				4BA338DF179809B200A660A3 /* TRAutocompleteView */,
 				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
+				C9F535D017B1449800696980 /* MCUIUtil.h */,
+				C9F535D117B1449800696980 /* MCUIUtil.m */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
+				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */,
 				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
-				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
 				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
 				C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */,
 				C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */,
@@ -386,7 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				4BDCF6B1179FB089001B3A32 /* home.png */,
-				C90DCACD179D481D0037A3C1 /* cool.txt */,
+				C90DCACD179D481D0037A3C1 /* cities.txt */,
 				C9C74BD217952687007AAFE2 /* MyCity-Info.plist */,
 				C9C74BD317952687007AAFE2 /* InfoPlist.strings */,
 				C9C74BD617952687007AAFE2 /* main.m */,
@@ -502,7 +507,7 @@
 			files = (
 				C9C74BE317952687007AAFE2 /* Images.xcassets in Resources */,
 				C9CBED0717990CBE006751D1 /* button.png in Resources */,
-				C90DCACE179D481D0037A3C1 /* cool.txt in Resources */,
+				C90DCACE179D481D0037A3C1 /* cities.txt in Resources */,
 				C9C74BD517952687007AAFE2 /* InfoPlist.strings in Resources */,
 				4BDCF6B2179FB089001B3A32 /* home.png in Resources */,
 				4BFE934917952E0C00C875D4 /* FacebookSDKResources.bundle in Resources */,
@@ -545,6 +550,7 @@
 				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
+				C9F535D217B1449800696980 /* MCUIUtil.m in Sources */,
 				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
 				4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */,
 				4BC648C3179D388700B85D70 /* MCWebViewController.m in Sources */,

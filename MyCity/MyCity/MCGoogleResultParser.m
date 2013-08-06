@@ -10,6 +10,7 @@
 
 @implementation MCGoogleResultParser
 
+
 +(BOOL) isACity:(NSDictionary *)place{
     NSString *formattedName = place[@"formatted_address"];
     NSArray *cityState = [NSArray arrayWithObjects:@"Singapore",@"Monaco",@"Vatican City",nil];
@@ -24,6 +25,7 @@
     return NO;
 }
 
+
 +(BOOL) isACountry:(NSDictionary *)place{
     NSString *formattedName = place[@"formatted_address"];
     NSArray *cityState = [NSArray arrayWithObjects:@"Singapore",@"Monaco",@"Vatican City",nil];
@@ -37,4 +39,5 @@
     }
     return NO;
 }
+
 @end

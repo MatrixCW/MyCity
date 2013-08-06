@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4457.6" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bbF-R6-yVE">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3682.6"/>
     </dependencies>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2038" y="-1320"/>
+            <point key="canvasLocation" x="-2746" y="-2126"/>
         </scene>
         <!--City Explorer View Controller-->
         <scene sceneID="zhp-VH-iZx">
@@ -79,34 +79,18 @@
                                     <segue destination="B0R-8W-Orf" kind="modal" identifier="SegueToWeb" id="xsc-4a-SGA"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xp5-kf-yHM">
-                                <rect key="frame" x="268" y="516" width="32" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="home.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="homeButtonPressed:" destination="rKC-O9-Uyp" eventType="touchUpInside" id="CP3-Y2-Orc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="TLp-Lv-2nV"/>
                     <connections>
-                        <outlet property="homeButton" destination="Xp5-kf-yHM" id="RaY-Qa-bZu"/>
                         <outlet property="mapView" destination="ghO-4t-Z9w" id="JPP-lk-hiT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyz-BC-Y0j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="-1769"/>
+            <point key="canvasLocation" x="-1852" y="-2215"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="Jiz-bP-BzA">
@@ -143,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2em-nf-agw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="-1783"/>
+            <point key="canvasLocation" x="-924" y="-2205"/>
         </scene>
         <!--Init Sliding View Controller-->
         <scene sceneID="EZc-8t-5mN">
@@ -159,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOc-xg-010" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1312" y="-838"/>
+            <point key="canvasLocation" x="-2076" y="-1114"/>
         </scene>
         <!--Geo Location View Controller-->
         <scene sceneID="cne-wl-9XK">
@@ -231,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="684-HE-3Wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2008" y="14"/>
+            <point key="canvasLocation" x="-2150" y="-112"/>
         </scene>
         <!--Map Preview Controller-->
         <scene sceneID="7kb-Az-Kbi">
@@ -267,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RV7-UF-tvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1204" y="14"/>
+            <point key="canvasLocation" x="-1188" y="-112"/>
         </scene>
         <!--Demographic View Controller-->
         <scene sceneID="gkK-Fn-Aor">
@@ -316,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Es1-RF-CDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-433" y="-826"/>
+            <point key="canvasLocation" x="-721" y="-1100"/>
         </scene>
         <!--Iconic Place View Controller-->
         <scene sceneID="LeM-AP-65L">
@@ -376,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gw4-Lm-f1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-905" y="-816"/>
+            <point key="canvasLocation" x="-1457" y="-1100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AGB-NB-5kv">
@@ -395,7 +379,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWF-as-MIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2567" y="-1238"/>
+            <point key="canvasLocation" x="-3447" y="-2126"/>
         </scene>
         <!--Demographic View Controller-->
         <scene sceneID="VZZ-gS-MQv">
@@ -429,7 +413,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bbj-Qy-eaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="-806"/>
+            <point key="canvasLocation" x="-61" y="-1106"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="EM5-xV-Hht">
@@ -455,7 +439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zfg-Pi-e6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1623" y="14"/>
+            <point key="canvasLocation" x="-1675" y="-112"/>
         </scene>
     </scenes>
     <resources>
