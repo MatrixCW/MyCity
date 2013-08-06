@@ -42,9 +42,7 @@
 		4BFE934D17952E4800C875D4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934C17952E4700C875D4 /* AdSupport.framework */; };
 		4BFE934F17952E5700C875D4 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE934E17952E5700C875D4 /* libsqlite3.dylib */; };
 		4BFE935117952E6200C875D4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BFE935017952E6200C875D4 /* Social.framework */; };
-		4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE93531795315900C875D4 /* MCLogInViewController.m */; };
 		4BFE93571795485000C875D4 /* city-at-night-shmlcbm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */; };
-		4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */; };
 		C90DCAC6179D336B0037A3C1 /* MCCityExplorerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */; };
 		C90DCACE179D481D0037A3C1 /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cities.txt */; };
 		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
@@ -144,11 +142,7 @@
 		4BFE934C17952E4700C875D4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		4BFE934E17952E5700C875D4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		4BFE935017952E6200C875D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		4BFE93521795315900C875D4 /* MCLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLogInViewController.h; sourceTree = "<group>"; };
-		4BFE93531795315900C875D4 /* MCLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLogInViewController.m; sourceTree = "<group>"; };
 		4BFE93561795485000C875D4 /* city-at-night-shmlcbm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "city-at-night-shmlcbm.jpg"; sourceTree = "<group>"; };
-		4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCEnterCityViewController.h; sourceTree = "<group>"; };
-		4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCEnterCityViewController.m; sourceTree = "<group>"; };
 		C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCityExplorerViewController.h; sourceTree = "<group>"; };
 		C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCityExplorerViewController.m; sourceTree = "<group>"; };
 		C90DCACD179D481D0037A3C1 /* cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cities.txt; sourceTree = "<group>"; };
@@ -350,37 +344,19 @@
 				4BA338F4179809E500A660A3 /* AFNetworking */,
 				4BA338DF179809B200A660A3 /* TRAutocompleteView */,
 				4B4EBFD61796D2C000BE0DA9 /* XYPieChart */,
-				C9F535D017B1449800696980 /* MCUIUtil.h */,
-				C9F535D117B1449800696980 /* MCUIUtil.m */,
 				C9C74BD917952687007AAFE2 /* MCAppDelegate.h */,
 				C9C74BDA17952687007AAFE2 /* MCAppDelegate.m */,
-				4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */,
-				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
-				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
-				C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */,
-				C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */,
-				4BC648C1179D388700B85D70 /* MCWebViewController.h */,
-				4BC648C2179D388700B85D70 /* MCWebViewController.m */,
-				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
-				4B58F414179A9BDB001A3334 /* MCMenuViewController.m */,
-				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
-				C9CBED0917990E62006751D1 /* MapPreviewController.m */,
-				C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */,
-				C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */,
 				C9C74BDF17952687007AAFE2 /* MCViewController.h */,
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
-				C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */,
-				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
+				C9F535D017B1449800696980 /* MCUIUtil.h */,
+				C9F535D117B1449800696980 /* MCUIUtil.m */,
+				4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */,
+				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
 				C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */,
 				C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */,
-				4B4EBFCD179684D100BE0DA9 /* MCIconicPlaceViewController.h */,
-				4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */,
-				4BFE935817954AF800C875D4 /* MCEnterCityViewController.h */,
-				4BFE935917954AF800C875D4 /* MCEnterCityViewController.m */,
-				4BFE93521795315900C875D4 /* MCLogInViewController.h */,
-				4BFE93531795315900C875D4 /* MCLogInViewController.m */,
-				4B4EBFD01796CC1F00BE0DA9 /* MCDemographicViewController.h */,
-				4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */,
+				C9C74BDC17952687007AAFE2 /* Main.storyboard */,
+				C9F535D317B15CB900696980 /* exploring city mode */,
+				C9F535D417B15CE400696980 /* editing new city mode */,
 				C9C74BE217952687007AAFE2 /* Images.xcassets */,
 				C9C74BD117952687007AAFE2 /* Supporting Files */,
 			);
@@ -390,8 +366,8 @@
 		C9C74BD117952687007AAFE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4BDCF6B1179FB089001B3A32 /* home.png */,
-				C90DCACD179D481D0037A3C1 /* cities.txt */,
+				C9F535D917B15EA900696980 /* text files */,
+				C9F535D817B15E9A00696980 /* pictures */,
 				C9C74BD217952687007AAFE2 /* MyCity-Info.plist */,
 				C9C74BD317952687007AAFE2 /* InfoPlist.strings */,
 				C9C74BD617952687007AAFE2 /* main.m */,
@@ -427,6 +403,76 @@
 				C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */,
 			);
 			path = ECSlidingViewController;
+			sourceTree = "<group>";
+		};
+		C9F535D317B15CB900696980 /* exploring city mode */ = {
+			isa = PBXGroup;
+			children = (
+				4BC648C1179D388700B85D70 /* MCWebViewController.h */,
+				4BC648C2179D388700B85D70 /* MCWebViewController.m */,
+				C90DCAC4179D336B0037A3C1 /* MCCityExplorerViewController.h */,
+				C90DCAC5179D336B0037A3C1 /* MCCityExplorerViewController.m */,
+			);
+			name = "exploring city mode";
+			sourceTree = "<group>";
+		};
+		C9F535D417B15CE400696980 /* editing new city mode */ = {
+			isa = PBXGroup;
+			children = (
+				C9F535D517B15D0400696980 /* step one: editing location */,
+				C9F535D617B15DB400696980 /* step two: uploading iconic photos */,
+				C9F535D717B15E3700696980 /* step three: show demographic data */,
+			);
+			name = "editing new city mode";
+			sourceTree = "<group>";
+		};
+		C9F535D517B15D0400696980 /* step one: editing location */ = {
+			isa = PBXGroup;
+			children = (
+				C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */,
+				C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */,
+				C94AA59B1795499600910CA2 /* MCGeoLocationViewController.h */,
+				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
+				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
+				4B58F414179A9BDB001A3334 /* MCMenuViewController.m */,
+				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
+				C9CBED0917990E62006751D1 /* MapPreviewController.m */,
+			);
+			name = "step one: editing location";
+			sourceTree = "<group>";
+		};
+		C9F535D617B15DB400696980 /* step two: uploading iconic photos */ = {
+			isa = PBXGroup;
+			children = (
+				4B4EBFCD179684D100BE0DA9 /* MCIconicPlaceViewController.h */,
+				4B4EBFCE179684D100BE0DA9 /* MCIconicPlaceViewController.m */,
+			);
+			name = "step two: uploading iconic photos";
+			sourceTree = "<group>";
+		};
+		C9F535D717B15E3700696980 /* step three: show demographic data */ = {
+			isa = PBXGroup;
+			children = (
+				4B4EBFD01796CC1F00BE0DA9 /* MCDemographicViewController.h */,
+				4B4EBFD11796CC1F00BE0DA9 /* MCDemographicViewController.m */,
+			);
+			name = "step three: show demographic data";
+			sourceTree = "<group>";
+		};
+		C9F535D817B15E9A00696980 /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				4BDCF6B1179FB089001B3A32 /* home.png */,
+			);
+			name = pictures;
+			sourceTree = "<group>";
+		};
+		C9F535D917B15EA900696980 /* text files */ = {
+			isa = PBXGroup;
+			children = (
+				C90DCACD179D481D0037A3C1 /* cities.txt */,
+			);
+			name = "text files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,7 +593,6 @@
 				C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */,
 				4BA33910179809E500A660A3 /* UIImageView+AFNetworking.m in Sources */,
 				4BA338F1179809B200A660A3 /* TRGoogleMapsSuggestion.m in Sources */,
-				4BFE935A17954AF800C875D4 /* MCEnterCityViewController.m in Sources */,
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9F535D217B1449800696980 /* MCUIUtil.m in Sources */,
@@ -558,7 +603,6 @@
 				C9C74BE117952687007AAFE2 /* MCViewController.m in Sources */,
 				4BC648BE179D108200B85D70 /* MCGoogleResultParser.m in Sources */,
 				4BA33908179809E500A660A3 /* AFHTTPClient.m in Sources */,
-				4BFE93541795315900C875D4 /* MCLogInViewController.m in Sources */,
 				C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */,
 				4B4EBFD51796D2B800BE0DA9 /* XYPieChart.m in Sources */,
 				4BA338F2179809B200A660A3 /* TRStringExtensions.m in Sources */,
