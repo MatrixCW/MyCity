@@ -197,6 +197,8 @@
     
     NSString *cityNamesToQuery = @"";
     
+    
+    //fix bug of wrong cities
     for(int i = self.currentIndex; i < self.levelOfAdministrations.count; i ++){
     
         cityNamesToQuery = [cityNamesToQuery stringByAppendingString:[self.levelOfAdministrations objectAtIndex:i]];
