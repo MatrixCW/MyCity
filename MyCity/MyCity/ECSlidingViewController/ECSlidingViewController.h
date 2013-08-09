@@ -68,9 +68,6 @@ typedef enum {
 }
 
 
-@property (nonatomic) int selectedCoordinates;
-@property (nonatomic,strong) NSMutableArray *addedCoordinates;
-
 /*
  returns the view controller that is in controller of other smaller viewcontrollers. This view controller is typically the one that is shown at first.
  */

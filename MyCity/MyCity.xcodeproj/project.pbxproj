@@ -68,7 +68,6 @@
 		C9CAD8BF17983421005B8B4E /* UIImage+ImageWithUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8BD17983421005B8B4E /* UIImage+ImageWithUIView.m */; };
 		C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */; };
 		C9CBED0717990CBE006751D1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = C9CBED0617990CBE006751D1 /* button.png */; };
-		C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CBED0917990E62006751D1 /* MapPreviewController.m */; };
 		C9F535D217B1449800696980 /* MCUIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F535D117B1449800696980 /* MCUIUtil.m */; };
 /* End PBXBuildFile section */
 
@@ -179,8 +178,6 @@
 		C9CAD8C0179834AA005B8B4E /* InitSlidingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitSlidingViewController.h; sourceTree = "<group>"; };
 		C9CAD8C1179834AA005B8B4E /* InitSlidingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitSlidingViewController.m; sourceTree = "<group>"; };
 		C9CBED0617990CBE006751D1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
-		C9CBED0817990E62006751D1 /* MapPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPreviewController.h; sourceTree = "<group>"; };
-		C9CBED0917990E62006751D1 /* MapPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPreviewController.m; sourceTree = "<group>"; };
 		C9F535D017B1449800696980 /* MCUIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUIUtil.h; sourceTree = "<group>"; };
 		C9F535D117B1449800696980 /* MCUIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUIUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -435,8 +432,6 @@
 				C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */,
 				4B58F413179A9BDB001A3334 /* MCMenuViewController.h */,
 				4B58F414179A9BDB001A3334 /* MCMenuViewController.m */,
-				C9CBED0817990E62006751D1 /* MapPreviewController.h */,
-				C9CBED0917990E62006751D1 /* MapPreviewController.m */,
 			);
 			name = "step one: editing location";
 			sourceTree = "<group>";
@@ -596,7 +591,6 @@
 				4BA3390E179809E500A660A3 /* AFURLConnectionOperation.m in Sources */,
 				C9C74BDB17952687007AAFE2 /* MCAppDelegate.m in Sources */,
 				C9F535D217B1449800696980 /* MCUIUtil.m in Sources */,
-				C9CBED0A17990E62006751D1 /* MapPreviewController.m in Sources */,
 				4B58F415179A9BDB001A3334 /* MCMenuViewController.m in Sources */,
 				4BC648C3179D388700B85D70 /* MCWebViewController.m in Sources */,
 				C9CAD8BE17983421005B8B4E /* ECSlidingViewController.m in Sources */,

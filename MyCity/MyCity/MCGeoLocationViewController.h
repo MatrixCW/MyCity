@@ -18,33 +18,29 @@
 
 @end
 
+@protocol FormattedAreaNamesReadyToBeShownDelegate
+
+-(void)refreshAreaNamesArray;
+
+@end
+
+
 @interface MCGeoLocationViewController : UIViewController<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate, AutoCompleteDelegate>
 
-@property (weak, nonatomic) IBOutlet UIButton *homeButton;
-- (IBAction)homeButtonPressed:(id)sender;
-
-- (IBAction)SlidingButtonPressed:(id)sender;
-
-
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-@property UIView *buttonView;
 @property (weak, nonatomic) IBOutlet MKMapView *MapView;
 @property (weak, nonatomic) IBOutlet UITextField *InputTextField;
 
+- (IBAction)SlidingButtonPressed:(id)sender;
 
+@property UIView *buttonView;
 @property NSMutableArray *GeoLocationInfo;
 @property NSString *currentCityName;
-
 @property NSString *formattedCityName;
 @property NSArray *formattedCityNameArray;
-
-@property int remainingSlots;
 @property NSArray *locationInfo;
-@property NSArray *geoCodeInfo;
 @property NSInteger mode;
 
-
-
-
+@property id<FormattedAreaNamesReadyToBeShownDelegate> menuViewDelegate;
 
 @end

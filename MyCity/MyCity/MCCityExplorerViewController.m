@@ -306,6 +306,7 @@
     
 }
 
+
 - (void)suggestionPressed{
     
     [self.buttonView removeFromSuperview];

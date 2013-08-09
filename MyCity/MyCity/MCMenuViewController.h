@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCGeoLocationViewController.h"
 
-@interface MCMenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface MCMenuViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,FormattedAreaNamesReadyToBeShownDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *MyTableView;
 
