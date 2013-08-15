@@ -47,6 +47,7 @@
 		C90DCACE179D481D0037A3C1 /* cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = C90DCACD179D481D0037A3C1 /* cities.txt */; };
 		C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */; };
 		C9B9425C1796D41500F24ECE /* MCGeoInfoTetrad.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */; };
+		C9BC4DB617B616460009825F /* MCNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BC4DB517B616460009825F /* MCNetworkUtil.m */; };
 		C9C74BCB17952687007AAFE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCA17952687007AAFE2 /* Foundation.framework */; };
 		C9C74BCD17952687007AAFE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */; };
 		C9C74BCF17952687007AAFE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C74BCE17952687007AAFE2 /* UIKit.framework */; };
@@ -149,6 +150,8 @@
 		C94AA59C1795499600910CA2 /* MCGeoLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MCGeoLocationViewController.m; sourceTree = "<group>"; };
 		C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCGeoInfoTetrad.h; sourceTree = "<group>"; };
 		C9B9425B1796D41500F24ECE /* MCGeoInfoTetrad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCGeoInfoTetrad.m; sourceTree = "<group>"; };
+		C9BC4DB417B616460009825F /* MCNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCNetworkUtil.h; sourceTree = "<group>"; };
+		C9BC4DB517B616460009825F /* MCNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCNetworkUtil.m; sourceTree = "<group>"; };
 		C9C74BC717952687007AAFE2 /* MyCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C74BCA17952687007AAFE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9C74BCC17952687007AAFE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -347,6 +350,8 @@
 				C9C74BE017952687007AAFE2 /* MCViewController.m */,
 				C9F535D017B1449800696980 /* MCUIUtil.h */,
 				C9F535D117B1449800696980 /* MCUIUtil.m */,
+				C9BC4DB417B616460009825F /* MCNetworkUtil.h */,
+				C9BC4DB517B616460009825F /* MCNetworkUtil.m */,
 				4BC648BC179D108200B85D70 /* MCGoogleResultParser.h */,
 				4BC648BD179D108200B85D70 /* MCGoogleResultParser.m */,
 				C9B9425A1796D41500F24ECE /* MCGeoInfoTetrad.h */,
@@ -574,6 +579,7 @@
 			files = (
 				C9CAD8C517983509005B8B4E /* InitSlidingViewController.m in Sources */,
 				4BA3390A179809E500A660A3 /* AFImageRequestOperation.m in Sources */,
+				C9BC4DB617B616460009825F /* MCNetworkUtil.m in Sources */,
 				4BA33909179809E500A660A3 /* AFHTTPRequestOperation.m in Sources */,
 				C94AA59D179549C100910CA2 /* MCGeoLocationViewController.m in Sources */,
 				4BA338F3179809B200A660A3 /* TRTextFieldExtensions.m in Sources */,

@@ -17,6 +17,7 @@
 #import "TRStringExtensions.h"
 #import "MCGoogleResultParser.h"
 #import "MCUIUtil.h"
+#import "MCNetworkUtil.h"
 
 
 #define  GOOGLE_MAP_API @"http://maps.googleapis.com/maps/api/geocode/json?address=%@&sensor=false"

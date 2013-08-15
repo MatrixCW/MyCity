@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E51FAC5D-7E92-40EC-8CD9-5351E176D1EB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyCity</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F3F9FF56-DFD7-4F5D-9BF8-98C76898875A</key>
+		<string>https://github.com/MatrixCW/MyCity.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyCity/MyCity.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F3F9FF56-DFD7-4F5D-9BF8-98C76898875A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/MatrixCW/MyCity.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F3F9FF56-DFD7-4F5D-9BF8-98C76898875A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F3F9FF56-DFD7-4F5D-9BF8-98C76898875A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyCity</string>
+		</dict>
+	</array>
+</dict>
+</plist>
